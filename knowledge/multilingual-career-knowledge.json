@@ -34,8 +34,8 @@
     {
       "intent": "job_search",
       "keywords": {
-        "de": ["jobsuche", "stellensuche", "job finden", "stelle finden", "arbeitsplatz finden", "job portal", "stellenanzeigen", "jobmarkt", "stellenmarkt"],
-        "en": ["job search", "job hunting", "find job", "job portal", "job board", "job market", "career opportunities", "employment search"]
+        "de": ["jobsuche", "stellensuche", "stelle finden", "arbeitsplatz finden", "stellenanzeigen", "jobmarkt", "stellenmarkt", "stellensuche tipps"],
+        "en": ["employment search", "position search", "find position", "career opportunities", "work opportunities", "position hunting", "employment opportunities"]
       },
       "responses": {
         "de": [
@@ -65,8 +65,8 @@
     {
       "intent": "application_writing",
       "keywords": {
-        "de": ["anschreiben", "bewerbungsschreiben", "motivationsschreiben", "bewerbungstext", "anschreiben verfassen", "bewerbung schreiben", "cover letter"],
-        "en": ["cover letter", "application letter", "motivation letter", "write application", "application writing", "cover letter writing"]
+        "de": ["anschreiben", "bewerbungsschreiben", "motivationsschreiben", "bewerbungstext", "anschreiben verfassen", "bewerbung schreiben", "cover letter", "gute bewerbung", "bewerbung verfassen", "bewerbung erstellen", "tipps bewerbung"],
+        "en": ["how do I write a good application", "write good application", "good application", "cover letter", "application letter", "motivation letter", "write application", "application writing", "cover letter writing", "how to write application", "writing applications", "application help", "create application", "application tips", "tips for applications", "how to write good application", "writing good application"]
       },
       "responses": {
         "de": [
@@ -97,7 +97,7 @@
       "intent": "resume_cv",
       "keywords": {
         "de": ["lebenslauf", "cv", "curriculum vitae", "tabellarischer lebenslauf", "berufserfahrung darstellen", "lebenslauf optimieren", "cv erstellen"],
-        "en": ["resume", "cv", "curriculum vitae", "resume writing", "cv writing", "professional experience", "resume optimization"]
+        "en": ["resume", "cv", "curriculum vitae", "resume writing", "cv writing", "professional experience", "resume optimization", "cv help"]
       },
       "responses": {
         "de": [
@@ -127,8 +127,8 @@
     {
       "intent": "interview",
       "keywords": {
-        "de": ["vorstellungsgespräch", "job interview", "bewerbungsgespräch", "interview vorbereitung", "gespräch vorbereitung", "interview fragen", "star methode"],
-        "en": ["job interview", "interview preparation", "interview questions", "interview prep", "star method", "behavioral interview"]
+        "de": ["vorstellungsgespräch", "bewerbungsgespräch", "interview vorbereitung", "gespräch vorbereitung", "interview fragen", "star methode", "interview tipps", "gesprächsvorbereitung"],
+        "en": ["interview preparation", "interview questions", "interview prep", "star method", "behavioral interview", "interview help", "interview tips", "job interview tips", "interview advice", "tips for job interviews", "tips for interviews", "job interview advice", "interview guidance", "tips job interviews", "job interview preparation", "prepare for interview", "tips for job interview", "tips job interview", "interview tips help"]
       },
       "responses": {
         "de": [
@@ -158,8 +158,8 @@
     {
       "intent": "salary",
       "keywords": {
-        "de": ["gehalt", "lohn", "gehaltsverhandlung", "gehaltsvorstellung", "verdienst", "bezahlung", "vergütung", "lohnverhandlung"],
-        "en": ["salary", "wage", "salary negotiation", "salary expectations", "compensation", "pay", "remuneration", "salary discussion"]
+        "de": ["gehalt", "lohn", "gehaltsverhandlung", "gehaltsvorstellung", "verdienst", "bezahlung", "vergütung", "lohnverhandlung", "gehalt verhandeln", "wie verhandle gehalt", "verhandlung gehalt", "gehaltsverhandlungen", "gehaltsgespräch", "mein gehalt", "verhandle mein gehalt"],
+        "en": ["salary negotiation", "negotiate salary", "how to negotiate salary", "negotiate my salary", "how do I negotiate my salary", "salary expectations", "compensation negotiation", "pay negotiation", "salary discussion", "salary talk", "wage negotiation", "salary negotiating", "negotiate compensation", "how to negotiate compensation"]
       },
       "responses": {
         "de": [
@@ -189,8 +189,8 @@
     {
       "intent": "career_planning",
       "keywords": {
-        "de": ["karriereplanung", "karriereziele", "berufsziele", "laufbahnplanung", "karriereweg", "aufstiegschancen", "berufliche ziele"],
-        "en": ["career planning", "career goals", "career path", "career advancement", "professional goals", "career strategy", "career roadmap"]
+        "de": ["karriereplanung", "karriereziele", "berufsziele", "laufbahnplanung", "karriereweg", "aufstiegschancen", "berufliche ziele", "hilfe karriereplanung", "hilfe bei karriereplanung", "karriereberatung", "karriereentwicklung"],
+        "en": ["career planning", "career goals", "career path", "career advancement", "professional goals", "career strategy", "career roadmap", "help career planning", "career development", "career consulting"]
       },
       "responses": {
         "de": [
@@ -282,8 +282,8 @@
     {
       "intent": "skills_development",
       "keywords": {
-        "de": ["skills entwickeln", "fähigkeiten lernen", "kompetenzen aufbauen", "weiterbildung", "fortbildung", "qualifikation erwerben", "zertifizierung"],
-        "en": ["skills development", "skill building", "learn skills", "training", "education", "certification", "professional development"]
+        "de": ["skills entwickeln", "fähigkeiten lernen", "kompetenzen aufbauen", "weiterbildung", "fortbildung", "qualifikation erwerben", "zertifizierung", "kompetenzen entwickeln", "skillset erweitern"],
+        "en": ["skills development", "skill building", "develop skills", "training courses", "professional education", "certification programs", "professional development", "upskilling", "reskilling"]
       },
       "responses": {
         "de": [
@@ -313,8 +313,8 @@
     {
       "intent": "remote_work",
       "keywords": {
-        "de": ["remote work", "homeoffice job", "fernarbeit", "mobiles arbeiten", "telearbeit", "remote bewerbung", "home office"],
-        "en": ["remote work", "work from home", "telecommuting", "distributed work", "remote job", "home office"]
+        "de": ["remote work", "homeoffice", "fernarbeit", "mobiles arbeiten", "telearbeit", "remote bewerbung", "home office"],
+        "en": ["remote work", "work from home", "telecommuting", "distributed work", "remote position", "home office"]
       },
       "responses": {
         "de": [
@@ -380,11 +380,11 @@
       },
       "responses": {
         "de": [
-          "Work-Life-Balance sollte bereits in der Bewerbungsphase thematisiert werden, wobei Sie geschickt flexible Arbeitsmodelle verhandeln können. Sprechen Sie Homeoffice-Optionen an, falls das Unternehmen diese anbietet. Erkundigen Sie sich nach flexiblen Arbeitszeiten, einer möglichen 4-Tage-Woche oder Gleitzeit-Modellen. Auch Teilzeit-Optionen können interessant sein, wenn sie zu Ihrer Lebenssituation passen. Wichtig ist dabei die richtige Kommunikation: Fokussieren Sie immer auf Ihre Produktivität und betonen Sie, dass flexible Arbeitsmodelle oft zu besseren Ergebnissen führen. Zeigen Sie eine Win-Win-Situation auf, von der beide Seiten profitieren. Falls der Arbeitgeber zögert, können Sie eine Probezeit für das gewünschte Arbeitsmodell vorschlagen.",
+          "Work-Life-Balance sollte bereits in der Bewerbungsphase thematisiert werden, wobei Sie geschickt flexible Arbeitsmodelle vorschlagen können. Sprechen Sie Homeoffice-Optionen an, falls das Unternehmen diese anbietet. Erkundigen Sie sich nach flexiblen Arbeitszeiten, einer möglichen 4-Tage-Woche oder Gleitzeit-Modellen. Auch Teilzeit-Optionen können interessant sein, wenn sie zu Ihrer Lebenssituation passen. Wichtig ist dabei die richtige Kommunikation: Fokussieren Sie immer auf Ihre Produktivität und betonen Sie, dass flexible Arbeitsmodelle oft zu besseren Ergebnissen führen. Zeigen Sie eine Win-Win-Situation auf, von der beiden Seiten profitieren. Falls der Arbeitgeber zögert, können Sie eine Probezeit für das gewünschte Arbeitsmodell vorschlagen.",
           "Das professionelle Setzen von Grenzen ist entscheidend für eine gesunde Work-Life-Balance. Beim Zeitmanagement sollten Sie feste Arbeitszeiten klar kommunizieren und diese auch konsequent einhalten. Definieren Sie feste E-Mail-Zeiten und antworten Sie außerhalb dieser nicht auf berufliche Nachrichten. Nehmen Sie Ihren Urlaub konsequent und lassen Sie sich nicht davon abbringen. Lernen Sie, höflich aber bestimmt 'Nein' zu sagen, wenn zusätzliche Aufgaben Ihre Work-Life-Balance gefährden würden. Für die Stressprävention ist es wichtig, regelmäßige Pausen einzuhalten, auch wenn der Arbeitstag hektisch ist. Integrieren Sie Sport und Bewegung in Ihren Alltag, pflegen Sie Ihre Hobbys als Ausgleich zur Arbeit und halten Sie soziale Kontakte aufrecht. Erlernen Sie Entspannungstechniken wie Meditation oder Atemübungen, um in stressigen Situationen gelassen zu bleiben."
         ],
         "en": [
-          "Work-life balance should be addressed already in the application phase, where you can skillfully negotiate flexible work models. Address home office options if the company offers them. Inquire about flexible working hours, a possible 4-day work week, or flextime models. Part-time options can also be interesting if they fit your life situation. The right communication is important: Always focus on your productivity and emphasize that flexible work models often lead to better results. Show a win-win situation that benefits both sides. If the employer hesitates, you can suggest a trial period for the desired work model.",
+          "Work-life balance should be addressed already in the application phase, where you can skillfully propose flexible work models. Address home office options if the company offers them. Inquire about flexible working hours, a possible 4-day work week, or flextime models. Part-time options can also be interesting if they fit your life situation. The right communication is important: Always focus on your productivity and emphasize that flexible work models often lead to better results. Show a win-win situation that benefits both sides. If the employer hesitates, you can suggest a trial period for the desired work model.",
           "Professional boundary setting is crucial for a healthy work-life balance. In time management, you should clearly communicate fixed working hours and consistently maintain them. Define fixed email times and don't respond to work messages outside these hours. Take your vacation consistently and don't let yourself be deterred from it. Learn to politely but firmly say 'no' when additional tasks would endanger your work-life balance. For stress prevention, it's important to maintain regular breaks, even when the workday is hectic. Integrate sports and exercise into your daily routine, maintain your hobbies as a counterbalance to work, and keep up social contacts. Learn relaxation techniques like meditation or breathing exercises to stay calm in stressful situations."
         ]
       },
@@ -431,8 +431,8 @@
     {
       "intent": "easy_job_platform",
       "keywords": {
-        "de": ["easy-job.ai", "easy job plattform", "bewerbungsplattform", "beta version", "easy job features", "plattform funktionen"],
-        "en": ["easy-job.ai", "easy job platform", "application platform", "beta version", "platform features"]
+        "de": ["easy-job.ai", "easyjob plattform", "bewerbungsplattform easy-job", "beta version easy-job", "easy-job features", "plattform funktionen easy-job", "easyjob ai plattform", "ki bewerbungsplattform easy-job"],
+        "en": ["easy-job.ai", "easyjob platform", "easy-job application platform", "beta version easy-job", "easy-job platform features", "easyjob ai platform", "easy-job automated platform"]
       },
       "responses": {
         "de": [
