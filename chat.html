@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy-Job Chat</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside id="sidebar" class="sidebar">
+            <div class="sidebar-content">
+                <div class="sidebar-button-wrapper">
+                    <button id="clearChatButton" class="clear-chat-button">
+                        <i class="fas fa-trash button-icon"></i>
+                        Clear Chat
+                    </button>
+                </div>
+
+                <div class="spacer"></div>
+
+                <div class="sidebar-bottom-section">
+                    <button id="goToHomeButton" class="sidebar-link home-link">
+                        <i class="fas fa-home sidebar-link-icon"></i>
+                        <span class="sidebar-link-text">Return to Home</span>
+                    </button>
+                </div>
+            </div>
+        </aside>
+
+        <main id="mainChatArea" class="main-chat-area">
+            <button id="toggleSidebarButton" class="sidebar-toggle-button">
+                <i id="toggleSidebarIcon" class="fas fa-bars toggle-icon"></i>
+            </button>
+            
+            <div id="messagesDisplay" class="chat-messages-display"> 
+                <div class="chat-initial-message">
+                    <i class="fas fa-robot robot-icon"></i>
+                    <h3 class="initial-message-title">Start a conversation</h3>
+                    <p class="initial-message-text">Ask me questions about job offers, careers, and more. I'm here to help you!</p>
+                </div>
+            </div>
+
+            <form id="chatForm" class="chat-input-area">
+                <div class="input-field-wrapper">
+                    <textarea
+                        id="userInput"
+                        class="user-input-textarea"
+                        placeholder="Send a message..."
+                        rows="1"
+                    ></textarea>
+                    <button
+                        type="submit"
+                        id="sendMessageButton"
+                        class="send-message-button"
+                        title="Send"
+                    >
+                        <i class="fas fa-paper-plane send-icon"></i>
+                    </button>
+                </div>
+                <p class="disclaimer-text">
+                    Our AI may make mistakes. Please verify important information.
+                </p>
+            </form>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
