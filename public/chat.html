@@ -226,6 +226,10 @@
             justify-content: flex-start;
         }
 
+        .message.system {
+            justify-content: center;
+        }
+
         .message-content {
             max-width: 70%;
             padding: 12px 16px;
@@ -248,6 +252,15 @@
             border: 1px solid var(--bot-message-border);
             border-bottom-left-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .message.system .message-content {
+            background: rgba(255, 193, 7, 0.1);
+            color: var(--text-secondary);
+            border: 1px solid rgba(255, 193, 7, 0.3);
+            border-radius: 18px;
+            font-style: italic;
+            font-size: 14px;
         }
 
         .message-time {
@@ -549,7 +562,29 @@
 
                 this.socket.on('bot-message', (data) => {
                     this.hideTyping();
-                    this.addMessage('bot', data.message, data.language);
+                    
+                    // Handle rate limit messages differently
+                    if (data.type === 'rate-limit') {
+                        this.addMessage('system', data.message, data.language);
+                        this.chatInput.disabled = true;
+                        this.sendBtn.disabled = true;
+                        
+                        // Re-enable after reset time
+                        const now = Date.now();
+                        const waitTime = Math.max(1000, data.resetTime - now);
+                        setTimeout(() => {
+                            this.chatInput.disabled = false;
+                            this.sendBtn.disabled = false;
+                            this.chatInput.placeholder = this.currentLanguage === 'de' ? 
+                                'Schreiben Sie Ihre Nachricht...' : 'Type your message...';
+                        }, waitTime);
+                        
+                        this.chatInput.placeholder = this.currentLanguage === 'de' ? 
+                            'Zu viele Nachrichten - bitte warten...' : 'Too many messages - please wait...';
+                    } else {
+                        this.addMessage('bot', data.message, data.language);
+                    }
+                    
                     if (data.language && data.language !== this.currentLanguage) {
                         this.currentLanguage = data.language;
                         this.updateLanguageUI();

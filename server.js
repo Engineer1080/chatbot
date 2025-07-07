@@ -8,6 +8,147 @@ const fs = require('fs');
 const multilingualCareerKnowledge = require('./knowledge/multilingual-career-knowledge.json');
 const multilingualFallbackResponses = require('./knowledge/multilingual-fallback-responses.json');
 
+// Simple Rate Limiter Class
+class RateLimiter {
+    constructor() {
+        this.requests = new Map(); // Store requests per identifier
+        this.config = {
+            // WebSocket rate limits (per socket ID)
+            websocket: {
+                maxRequests: 30,      // Max messages per window
+                windowMs: 60000,      // 1 minute window
+                blockDurationMs: 300000 // 5 minute block
+            },
+            // HTTP rate limits (per IP)
+            http: {
+                maxRequests: 100,     // Max requests per window
+                windowMs: 60000,      // 1 minute window
+                blockDurationMs: 180000 // 3 minute block
+            }
+        };
+        
+        // Cleanup old entries every 5 minutes
+        setInterval(() => this.cleanup(), 300000);
+    }
+
+    // Check if request is allowed
+    isAllowed(identifier, type = 'websocket') {
+        const config = this.config[type];
+        const now = Date.now();
+        
+        if (!this.requests.has(identifier)) {
+            this.requests.set(identifier, {
+                count: 1,
+                windowStart: now,
+                blockedUntil: null
+            });
+            return { allowed: true, resetTime: now + config.windowMs };
+        }
+
+        const record = this.requests.get(identifier);
+        
+        // Check if currently blocked
+        if (record.blockedUntil && now < record.blockedUntil) {
+            return { 
+                allowed: false, 
+                blocked: true,
+                resetTime: record.blockedUntil,
+                message: `Rate limit exceeded. Try again in ${Math.ceil((record.blockedUntil - now) / 1000)} seconds.`
+            };
+        }
+
+        // Reset window if expired
+        if (now - record.windowStart >= config.windowMs) {
+            record.count = 1;
+            record.windowStart = now;
+            record.blockedUntil = null;
+            return { allowed: true, resetTime: now + config.windowMs };
+        }
+
+        // Increment count
+        record.count++;
+
+        // Check if limit exceeded
+        if (record.count > config.maxRequests) {
+            record.blockedUntil = now + config.blockDurationMs;
+            return { 
+                allowed: false, 
+                blocked: true,
+                resetTime: record.blockedUntil,
+                message: `Rate limit exceeded. Blocked for ${Math.ceil(config.blockDurationMs / 1000)} seconds.`
+            };
+        }
+
+        return { 
+            allowed: true, 
+            resetTime: record.windowStart + config.windowMs,
+            remaining: config.maxRequests - record.count
+        };
+    }
+
+    // Get current status for identifier
+    getStatus(identifier, type = 'websocket') {
+        const config = this.config[type];
+        const record = this.requests.get(identifier);
+        
+        if (!record) {
+            return { 
+                count: 0, 
+                remaining: config.maxRequests,
+                resetTime: Date.now() + config.windowMs 
+            };
+        }
+
+        const now = Date.now();
+        
+        if (record.blockedUntil && now < record.blockedUntil) {
+            return {
+                count: record.count,
+                remaining: 0,
+                resetTime: record.blockedUntil,
+                blocked: true
+            };
+        }
+
+        if (now - record.windowStart >= config.windowMs) {
+            return { 
+                count: 0, 
+                remaining: config.maxRequests,
+                resetTime: now + config.windowMs 
+            };
+        }
+
+        return {
+            count: record.count,
+            remaining: Math.max(0, config.maxRequests - record.count),
+            resetTime: record.windowStart + config.windowMs
+        };
+    }
+
+    // Cleanup old entries
+    cleanup() {
+        const now = Date.now();
+        const toDelete = [];
+
+        for (const [identifier, record] of this.requests) {
+            // Delete if window expired and not blocked
+            if (!record.blockedUntil && (now - record.windowStart) > this.config.websocket.windowMs * 2) {
+                toDelete.push(identifier);
+            }
+            // Delete if block expired
+            else if (record.blockedUntil && now > record.blockedUntil + this.config.websocket.windowMs) {
+                toDelete.push(identifier);
+            }
+        }
+
+        toDelete.forEach(id => this.requests.delete(id));
+        
+        if (toDelete.length > 0) {
+            console.log(`Rate limiter cleaned up ${toDelete.length} old entries`);
+        }
+    }
+}
+
 class MultilingualCareerChatBot {
     constructor() {
         this.name = 'EasyJobAI Career Assistant';
@@ -294,12 +435,39 @@ const io = socketIo(server, {
     }
 });
 
-// Initialize Multilingual Bot
+// Initialize Multilingual Bot and Rate Limiter
 const chatBot = new MultilingualCareerChatBot();
+const rateLimiter = new RateLimiter();
+
+// Rate limiting middleware for HTTP requests
+const httpRateLimit = (req, res, next) => {
+    const clientIP = req.ip || req.connection.remoteAddress || req.headers['x-forwarded-for'] || 'unknown';
+    const result = rateLimiter.isAllowed(clientIP, 'http');
+    
+    // Add rate limit headers
+    res.set({
+        'X-RateLimit-Limit': rateLimiter.config.http.maxRequests,
+        'X-RateLimit-Remaining': result.remaining || 0,
+        'X-RateLimit-Reset': new Date(result.resetTime).toISOString()
+    });
+    
+    if (!result.allowed) {
+        console.log(`Rate limit exceeded for IP: ${clientIP}`);
+        return res.status(429).json({
+            error: 'Too Many Requests',
+            message: result.message,
+            resetTime: result.resetTime
+        });
+    }
+    
+    next();
+};
 
 // Middleware
+app.set('trust proxy', true); // Trust proxy for correct IP detection
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
+app.use(httpRateLimit); // Apply rate limiting to all routes
 
 // Serve main page
 app.get('/', (req, res) => {
@@ -308,12 +476,34 @@ app.get('/', (req, res) => {
 
 // API endpoint for health check
 app.get('/api/health', (req, res) => {
+    const clientIP = req.ip || req.connection.remoteAddress || 'unknown';
+    const rateLimitStatus = rateLimiter.getStatus(clientIP, 'http');
+    
     res.json({ 
         status: 'healthy', 
         bot: chatBot.name,
         supportedLanguages: chatBot.supportedLanguages,
         languageStats: chatBot.getLanguageStats(),
+        rateLimit: {
+            remaining: rateLimitStatus.remaining,
+            resetTime: rateLimitStatus.resetTime,
+            blocked: rateLimitStatus.blocked || false
+        },
         timestamp: new Date().toISOString()
+    });
+});
+
+// API endpoint to check rate limit status
+app.get('/api/rate-limit', (req, res) => {
+    const clientIP = req.ip || req.connection.remoteAddress || 'unknown';
+    const status = rateLimiter.getStatus(clientIP, 'http');
+    
+    res.json({
+        limit: rateLimiter.config.http.maxRequests,
+        remaining: status.remaining,
+        resetTime: status.resetTime,
+        blocked: status.blocked || false,
+        windowMs: rateLimiter.config.http.windowMs
     });
 });
 
@@ -361,10 +551,31 @@ io.on('connection', (socket) => {
         timestamp: new Date().toISOString()
     });
 
-    // Handle incoming messages
+    // Handle incoming messages with rate limiting
     socket.on('user-message', (data) => {
         try {
-            console.log(`Message from ${socket.id}: ${data.message}`);
+            // Check rate limit
+            const rateCheck = rateLimiter.isAllowed(socket.id, 'websocket');
+            
+            if (!rateCheck.allowed) {
+                console.log(`Rate limit exceeded for socket: ${socket.id}`);
+                const userLang = chatBot.getUserLanguage(socket.id);
+                const rateLimitMessage = userLang === 'en' ? 
+                    'You are sending messages too quickly. Please slow down.' :
+                    'Sie senden Nachrichten zu schnell. Bitte etwas langsamer.';
+                
+                socket.emit('bot-message', {
+                    type: 'rate-limit',
+                    sender: 'bot',
+                    message: rateLimitMessage,
+                    language: userLang,
+                    timestamp: new Date().toISOString(),
+                    resetTime: rateCheck.resetTime
+                });
+                return;
+            }
+            
+            console.log(`Message from ${socket.id}: ${data.message} (Rate: ${rateCheck.remaining || 0} remaining)`);
             
             // Process message through multilingual bot
             const botResponse = chatBot.processMessage(socket.id, data.message);
@@ -376,7 +587,11 @@ io.on('connection', (socket) => {
                 sender: 'bot',
                 message: botResponse,
                 language: userLang,
-                timestamp: new Date().toISOString()
+                timestamp: new Date().toISOString(),
+                rateLimit: {
+                    remaining: rateCheck.remaining || 0,
+                    resetTime: rateCheck.resetTime
+                }
             });
 
         } catch (error) {
@@ -503,8 +718,10 @@ const HOST = process.env.HOST || 'localhost';
 server.listen(PORT, HOST, () => {
     console.log(`\n🤖 EasyJobAI Multilingual Chatbot Server running on http://${HOST}:${PORT}`);
     console.log(`📊 Health check available at http://${HOST}:${PORT}/api/health`);
+    console.log(`⚡ Rate limit status at http://${HOST}:${PORT}/api/rate-limit`);
     console.log(`💬 Bot Name: ${chatBot.name}`);
     console.log(`🌐 Supported Languages: ${chatBot.supportedLanguages.join(', ')}`);
+    console.log(`🛡️  Rate Limiting: ${rateLimiter.config.websocket.maxRequests} messages/min (WebSocket), ${rateLimiter.config.http.maxRequests} requests/min (HTTP)`);
     console.log(`🚀 Ready to help with career questions in multiple languages!\n`);
 });
 
