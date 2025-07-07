@@ -1,32 +1,32 @@
 {
   "softFallback": {
     "de": [
-      "Das habe ich nicht ganz verstanden. Könnten Sie Ihre Frage anders formulieren? Ich helfe gerne bei Themen wie Bewerbung, Lebenslauf, Vorstellungsgespräche oder Karriereplanung.",
-      "Entschuldigung, ich bin mir nicht sicher, was Sie meinen. Können Sie spezifischer sein? Ich bin spezialisiert auf Karriere- und Bewerbungsthemen.",
-      "Ich konnte Ihre Anfrage nicht eindeutig zuordnen. Versuchen Sie es mit konkreteren Begriffen wie 'Bewerbung schreiben', 'Gehalt verhandeln' oder 'Jobsuche'.",
-      "Das verstehe ich leider nicht. Möchten Sie vielleicht wissen, wie Sie sich bewerben, Ihr Gehalt verhandeln oder Ihre Karriere planen können?",
-      "Könnten Sie das nochmal anders ausdrücken? Ich kann Ihnen bei Bewerbungen, Vorstellungsgesprächen, Karriereplanung und vielen anderen beruflichen Themen helfen."
+      "Das habe ich nicht ganz verstanden. Könnten Sie Ihre Frage vielleicht anders formulieren? Ich helfe Ihnen gerne bei allen Themen rund um Bewerbungen, Lebenslauf-Gestaltung, Vorstellungsgespräche oder Karriereplanung weiter.",
+      "Entschuldigung, ich bin mir nicht ganz sicher, was Sie meinen. Können Sie etwas spezifischer werden? Ich bin darauf spezialisiert, Ihnen bei Karriere- und Bewerbungsthemen zu helfen.",
+      "Ich konnte Ihre Anfrage leider nicht eindeutig zuordnen. Versuchen Sie es gerne mit konkreteren Begriffen wie 'Bewerbung schreiben', 'Gehalt verhandeln' oder 'Jobsuche', dann kann ich Ihnen gezielter helfen.",
+      "Das verstehe ich leider nicht ganz. Möchten Sie vielleicht wissen, wie Sie sich erfolgreich bewerben, Ihr Gehalt verhandeln oder Ihre Karriere strategisch planen können?",
+      "Könnten Sie das nochmal etwas anders ausdrücken? Ich kann Ihnen gerne bei Bewerbungen, Vorstellungsgesprächen, Karriereplanung und vielen anderen beruflichen Themen behilflich sein."
     ],
-    "en": [
-      "I didn't quite understand that. Could you rephrase your question? I'm happy to help with topics like applications, resumes, job interviews, or career planning.",
-      "Sorry, I'm not sure what you mean. Can you be more specific? I specialize in career and application topics.",
-      "I couldn't clearly categorize your request. Try using more concrete terms like 'writing applications', 'salary negotiation', or 'job search'.",
-      "I'm sorry, I don't understand that. Would you perhaps like to know how to apply for jobs, negotiate your salary, or plan your career?",
-      "Could you express that differently? I can help you with applications, job interviews, career planning, and many other professional topics."
-    ]
+          "en": [
+        "I didn't quite understand that. Could you perhaps rephrase your question? I'm happy to help you with all topics related to applications, resume design, job interviews, or career planning.",
+        "Sorry, I'm not entirely sure what you mean. Could you be a bit more specific? I specialize in helping you with career and application topics.",
+        "I couldn't clearly categorize your request, unfortunately. Please feel free to try using more concrete terms like 'writing applications', 'salary negotiation', or 'job search', then I can help you more specifically.",
+        "I'm sorry, I don't quite understand that. Would you perhaps like to know how to apply successfully, negotiate your salary, or plan your career strategically?",
+        "Could you express that a bit differently? I'm happy to help you with applications, job interviews, career planning, and many other professional topics."
+      ]
   },
   "hardFallback": {
     "de": [
-      "Es scheint, als hätten wir aneinander vorbeigeredet. Lassen Sie uns von vorne beginnen! Ich bin der EasyJobAI Karriere Assistent und helfe bei Karrierefragen. Womit kann ich Ihnen helfen?",
-      "Beginnen wir neu! Ich bin der EasyJobAI Karriere Assistent und unterstütze Sie bei allem rund um Bewerbungen, Jobsuche und Karriereentwicklung. Was ist Ihr wichtigstes Anliegen?",
-      "Lassen Sie uns einen Neustart machen. Ich bin der EasyJobAI Karriere Assistent. Hier sind einige Themen, bei denen ich Ihnen helfen kann:\n• Bewerbung schreiben\n• Lebenslauf optimieren\n• Vorstellungsgespräch vorbereiten\n• Gehalt verhandeln\n• Karriere planen\n\nWas interessiert Sie am meisten?",
-      "Starten wir von vorne! Ich bin der EasyJobAI Karriere Assistent und kann Ihnen bei folgenden Themen helfen:\n• Jobsuche und Bewerbungsstrategie\n• CV und Anschreiben\n• Interview-Vorbereitung\n• Gehaltsverhandlung\n• Berufliche Weiterentwicklung\n\nWorüber möchten Sie sprechen?"
+      "Es scheint, als hätten wir aneinander vorbeigeredet. Lassen Sie uns von vorne beginnen! Ich bin der EasyJobAI Karriere Assistent und helfe Ihnen gerne bei allen Karrierefragen. Womit kann ich Ihnen behilflich sein?",
+      "Beginnen wir noch einmal neu! Ich bin der EasyJobAI Karriere Assistent und unterstütze Sie bei allem rund um Bewerbungen, Jobsuche und Karriereentwicklung. Was ist Ihr wichtigstes Anliegen im Moment?",
+      "Lassen Sie uns einen Neustart machen. Ich bin der EasyJobAI Karriere Assistent und kann Ihnen bei verschiedenen beruflichen Themen helfen. Zum Beispiel beim Schreiben von Bewerbungen, der Optimierung Ihres Lebenslaufs, der Vorbereitung auf Vorstellungsgespräche, bei Gehaltsverhandlungen oder der strategischen Karriereplanung. Was interessiert Sie am meisten?",
+      "Starten wir noch einmal von vorne! Ich bin der EasyJobAI Karriere Assistent und kann Ihnen bei verschiedenen wichtigen Themen helfen. Dazu gehören die Jobsuche und Bewerbungsstrategie, das Verfassen von Lebensläufen und Anschreiben, die Vorbereitung auf Interviews, Gehaltsverhandlungen sowie die berufliche Weiterentwicklung. Worüber möchten Sie gerne sprechen?"
     ],
     "en": [
-      "It seems we've been talking past each other. Let's start over! I'm the EasyJobAI Career Assistant and help with career questions. How can I help you?",
-      "Let's start fresh! I'm the EasyJobAI Career Assistant and I support you with everything related to applications, job search, and career development. What's your main concern?",
-      "Let's make a fresh start. I'm the EasyJobAI Career Assistant. Here are some topics I can help you with:\n• Writing applications\n• Optimizing resumes\n• Preparing for job interviews\n• Salary negotiation\n• Career planning\n\nWhat interests you most?",
-      "Let's start from the beginning! I'm the EasyJobAI Career Assistant and I can help you with the following topics:\n• Job search and application strategy\n• CV and cover letters\n• Interview preparation\n• Salary negotiation\n• Professional development\n\nWhat would you like to talk about?"
+      "It seems we've been talking past each other. Let's start over! I'm the EasyJobAI Career Assistant and I'm happy to help you with all career questions. How can I assist you?",
+      "Let's start fresh again! I'm the EasyJobAI Career Assistant and I support you with everything related to applications, job search, and career development. What's your most important concern at the moment?",
+      "Let's make a fresh start. I'm the EasyJobAI Career Assistant and I can help you with various professional topics. For example, with writing applications, optimizing your resume, preparing for job interviews, salary negotiations, or strategic career planning. What interests you most?",
+      "Let's start from the beginning again! I'm the EasyJobAI Career Assistant and I can help you with various important topics. These include job search and application strategy, writing resumes and cover letters, interview preparation, salary negotiations, and professional development. What would you like to talk about?"
     ]
   }
 }

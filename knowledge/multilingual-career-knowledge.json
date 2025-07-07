@@ -34,186 +34,370 @@
     {
       "intent": "job_search",
       "keywords": {
-        "de": ["job", "jobs", "stelle", "stellen", "arbeitsplatz", "jobsuche", "suche", "suchen", "aktuell", "arbeit", "position"],
-        "en": ["job", "jobs", "position", "work", "employment", "job search", "looking for", "search", "current", "opportunities"]
+        "de": ["job", "jobs", "stelle", "stellen", "arbeitsplatz", "jobsuche", "suche", "suchen", "aktuell", "arbeit", "position", "stellensuche"],
+        "en": ["job", "jobs", "position", "work", "employment", "job search", "looking for", "search", "current", "opportunities", "job hunting"]
       },
       "responses": {
         "de": [
-          "Bei der Jobsuche kann ich Ihnen gerne helfen! Wichtig ist eine strukturierte Herangehensweise: Definieren Sie Ihre Zielposition, optimieren Sie Ihre Bewerbungsunterlagen und nutzen Sie verschiedene Kanäle wie Jobbörsen, Unternehmenswebsites und Ihr Netzwerk.",
-          "Für eine erfolgreiche Jobsuche empfehle ich: 1) Klare Zieldefinition 2) Optimierte Bewerbungsunterlagen 3) Nutzung verschiedener Suchkanäle 4) Aktives Netzwerken. In welchem Bereich suchen Sie denn?",
-          "Die Jobsuche kann herausfordernd sein, aber mit der richtigen Strategie finden Sie den passenden Job. Beginnen Sie mit einer Analyse Ihrer Stärken und Ziele, dann optimieren Sie Ihren Lebenslauf und Ihr LinkedIn-Profil."
+          "Eine effektive Jobsuche erfordert eine strukturierte und strategische Herangehensweise, die weit über das einfache Durchstöbern von Stellenanzeigen hinausgeht. Beginnen Sie damit, Ihre Zielposition und Wunschbranche klar zu definieren - nur so können Sie gezielt suchen und sich optimal positionieren. Erstellen Sie ein überzeugendes LinkedIn-Profil, da dies heute oft der erste Eindruck ist, den potenzielle Arbeitgeber von Ihnen bekommen. Nutzen Sie verschiedene Suchkanäle parallel: traditionelle Jobbörsen, Unternehmenswebsites und Ihr persönliches Netzwerk. Werden Sie auch proaktiv und bewerben Sie sich auf nicht ausgeschriebene Stellen. Dokumentieren Sie alle Ihre Bewerbungen systematisch, um den Überblick zu behalten und Follow-ups nicht zu verpassen.",
+          "Für eine erfolgreiche Jobsuche empfehle ich Ihnen fünf systematische Schritte, die aufeinander aufbauen. Starten Sie mit einer ehrlichen Selbstanalyse: Welche Stärken haben Sie, was interessiert Sie wirklich, und welche beruflichen Ziele verfolgen Sie? Führen Sie anschließend eine gründliche Marktrecherche durch, um zu verstehen, welche Positionen verfügbar sind und welche Qualifikationen gefragt sind. Optimieren Sie dann Ihre Bewerbungsunterlagen - Lebenslauf und Anschreiben müssen perfekt auf Ihre Zielposition abgestimmt sein. Betreiben Sie aktives Netzwerken, sowohl online als auch offline, denn viele Jobs werden über persönliche Kontakte vergeben. Schließlich sollten Sie regelmäßig Bewerbungen versenden, wobei jedes Anschreiben individuell auf die jeweilige Stelle zugeschnitten sein muss.",
+          "Die moderne Jobsuche hat sich grundlegend gewandelt, denn etwa 70% aller Stellen werden im sogenannten 'verdeckten Arbeitsmarkt' besetzt, bevor sie öffentlich ausgeschrieben werden. Nutzen Sie daher professionelle Netzwerke wie XING und LinkedIn nicht nur passiv, sondern aktiv für gezieltes Networking. Scheuen Sie sich nicht vor der Direktansprache von Unternehmen, die Sie interessieren, auch wenn diese gerade keine Stellen ausschreiben. Initiativbewerbungen können oft der Schlüssel zu Ihrem Traumjob sein. Aktivieren Sie Ihr persönliches Netzwerk und bitten Sie um Empfehlungen - oft kennt jemand jemanden, der jemanden kennt. Besuchen Sie außerdem Recruiting-Events und Karrieremessen, um direkten Kontakt zu Arbeitgebern aufzubauen."
         ],
         "en": [
-          "I'd be happy to help you with your job search! A structured approach is important: Define your target position, optimize your application documents, and use various channels like job boards, company websites, and your network.",
-          "For a successful job search, I recommend: 1) Clear goal definition 2) Optimized application documents 3) Using various search channels 4) Active networking. What field are you looking in?",
-          "Job searching can be challenging, but with the right strategy, you'll find the right position. Start with analyzing your strengths and goals, then optimize your resume and LinkedIn profile."
+          "Effective job searching requires a structured approach:\n\n• Define your target position and desired industry\n• Create a compelling LinkedIn profile\n• Use various channels: job boards, company websites, network\n• Apply proactively for unlisted positions\n• Document your applications systematically",
+          "For successful job searching, I recommend these 5 steps:\n\n1. Self-analysis: strengths, interests, goals\n2. Market research: what positions are available?\n3. Optimize application documents\n4. Active networking online and offline\n5. Regular applications with individualized cover letters",
+          "Modern job searching happens 70% in the 'hidden job market'. Use:\n• LinkedIn and professional networks\n• Direct company outreach\n• Cold applications\n• Referrals from your network\n• Recruiting events and career fairs"
         ]
       },
       "followUp": {
         "de": [
           "In welcher Branche oder für welche Position suchen Sie?",
-          "Haben Sie schon Bewerbungsunterlagen vorbereitet?",
-          "Möchten Sie Tipps für bestimmte Jobportale?"
+          "Haben Sie schon ein LinkedIn-Profil erstellt?",
+          "Möchten Sie Tipps für bestimmte Jobportale oder Suchstrategien?"
         ],
         "en": [
           "What industry or position are you looking for?",
-          "Have you already prepared your application documents?",
-          "Would you like tips for specific job portals?"
+          "Have you already created a LinkedIn profile?",
+          "Would you like tips for specific job portals or search strategies?"
         ]
       }
     },
     {
       "intent": "application_writing",
       "keywords": {
-        "de": ["bewerbung", "bewerbungsschreiben", "anschreiben", "motivationsschreiben", "bewerbungsunterlagen", "bewerben"],
-        "en": ["application", "cover letter", "application letter", "motivation letter", "applying", "apply"]
+        "de": ["bewerbung", "bewerbungsschreiben", "anschreiben", "motivationsschreiben", "bewerbungsunterlagen", "bewerben", "bewerbungsmappe"],
+        "en": ["application", "cover letter", "application letter", "motivation letter", "applying", "apply", "application package"]
       },
       "responses": {
         "de": [
-          "Eine gute Bewerbung besteht aus Anschreiben, Lebenslauf und relevanten Zeugnissen. Das Anschreiben sollte individuell auf die Stelle zugeschnitten sein und Ihre Motivation deutlich machen.",
-          "Beim Bewerbungsschreiben ist es wichtig, die Stellenausschreibung genau zu lesen und Ihre Qualifikationen konkret darauf zu beziehen. Zeigen Sie, warum Sie der/die Richtige für die Position sind.",
-          "Ein überzeugendes Anschreiben hat einen klaren Aufbau: Einleitung mit Bezug zur Stelle, Hauptteil mit Ihren Qualifikationen und Schluss mit Gehaltsvorstellung und Verfügbarkeit."
+          "Ein überzeugendes Anschreiben sollte einer klaren Struktur folgen. Beginnen Sie mit einem präzisen Betreff, der die konkrete Stellenbezeichnung und idealerweise die Referenznummer enthält. In der Einleitung nehmen Sie direkten Bezug zur ausgeschriebenen Stelle und wecken Interesse mit einem starken ersten Eindruck. Der Hauptteil ist das Herzstück Ihres Anschreibens - hier präsentieren Sie Ihre relevanten Qualifikationen und konkreten Erfolge. Erklären Sie anschließend Ihre Motivation: Warum möchten Sie genau bei diesem Unternehmen arbeiten? Im Schluss erwähnen Sie Ihre Gehaltsvorstellung, Verfügbarkeit und bitten um ein persönliches Gespräch. Wichtig: Das Anschreiben sollte maximal eine Seite umfassen und individuell auf jede Stelle angepasst werden.",
+          "Vermeiden Sie die häufigsten Anschreiben-Fehler für bessere Erfolgschancen. Verwenden Sie niemals Standardtexte ohne Anpassung, da Personaler diese sofort erkennen. Wiederholen Sie nicht einfach Ihren Lebenslauf, sondern ergänzen Sie ihn mit konkreten Beispielen und Erfahrungen. Achten Sie unbedingt auf Rechtschreibung und Grammatik - Fehler wirken unprofessionell. Stattdessen sollten Sie jedes Anschreiben individuell gestalten und deutlich machen, welchen Mehrwert Sie dem Unternehmen bieten können. Nennen Sie konkrete Erfolge mit Zahlen und Fakten, und verwenden Sie durchgehend einen professionellen, aber authentischen Ton.",
+          "Eine erfolgreiche Bewerbungsstrategie beginnt mit der gründlichen Analyse der Stellenausschreibung. Identifizieren Sie die gefragten Skills und Qualifikationen, und verwenden Sie relevante Keywords aus der Anzeige in Ihrem Anschreiben. Bereiten Sie konkrete Beispiele vor, die Ihre Qualifikationen belegen. Recherchieren Sie das Unternehmen intensiv und nehmen Sie Bezug auf aktuelle Entwicklungen oder Werte der Firma. Schließen Sie Ihr Anschreiben mit einem klaren Call-to-Action ab, indem Sie um ein persönliches Gespräch bitten. Übrigens: Sie können sich die Arbeit erleichtern und perfekte Bewerbungsanschreiben mit KI erstellen lassen unter https://www.easy-job.ai/applications"
         ],
         "en": [
-          "A good application consists of a cover letter, resume, and relevant certificates. The cover letter should be individually tailored to the position and clearly express your motivation.",
-          "When writing applications, it's important to read the job posting carefully and relate your qualifications specifically to it. Show why you're the right person for the position.",
-          "A convincing cover letter has a clear structure: Introduction with reference to the position, main part with your qualifications, and conclusion with salary expectations and availability."
+          "A convincing cover letter should follow a clear and logical structure that guides the reader through your candidacy. Begin with a precise subject line that includes the specific job title and ideally the reference number. Your introduction should make direct reference to the advertised position and create interest with a strong first impression. The main body is the heart of your cover letter, where you present your relevant qualifications and concrete achievements. Follow this by explaining your motivation - why do you want to work specifically for this company? Conclude by mentioning your salary expectations, availability, and requesting a personal interview. Remember: keep your cover letter to a maximum of one page and customize it individually for each position.",
+          "Avoid the most common cover letter mistakes to improve your chances of success. Never use standard templates without customization, as recruiters recognize these immediately. Don't simply repeat your resume content; instead, complement it with specific examples and experiences. Pay careful attention to spelling and grammar, as errors appear unprofessional and careless. Instead, personalize each cover letter individually and clearly demonstrate what added value you can bring to the company. Mention concrete achievements with numbers and facts, and maintain a professional yet authentic tone throughout your letter.",
+          "A successful application strategy begins with thorough analysis of the job posting and company research. Identify the required skills and qualifications, then incorporate relevant keywords from the advertisement into your cover letter. Prepare specific examples that demonstrate your qualifications and past successes. Research the company intensively and reference current developments, values, or projects that resonate with you. Conclude your cover letter with a clear call-to-action by requesting a personal interview. By the way, you can make this process easier by generating perfect cover letters with AI at https://www.easy-job.ai/applications"
         ]
       },
       "followUp": {
         "de": [
-          "Haben Sie schon eine konkrete Stelle im Blick, für die Sie sich bewerben möchten?",
-          "Benötigen Sie Hilfe bei einem bestimmten Teil der Bewerbung?",
-          "Möchten Sie wissen, wie Sie Ihr Anschreiben strukturieren können?"
+          "Haben Sie schon eine konkrete Stelle im Blick?",
+          "Möchten Sie Hilfe bei der Struktur Ihres Anschreibens?",
+          "Brauchen Sie Unterstützung bei der Formulierung?"
         ],
         "en": [
-          "Do you already have a specific position in mind that you want to apply for?",
-          "Do you need help with a particular part of the application?",
-          "Would you like to know how to structure your cover letter?"
+          "Do you already have a specific position in mind?",
+          "Would you like help with the structure of your cover letter?",
+          "Do you need support with the wording?"
         ]
       }
     },
     {
       "intent": "resume_cv",
       "keywords": {
-        "de": ["lebenslauf", "cv", "curriculum vitae", "tabellarisch", "berufserfahrung"],
-        "en": ["resume", "cv", "curriculum vitae", "work experience", "professional experience"]
+        "de": ["lebenslauf", "cv", "curriculum vitae", "tabellarisch", "berufserfahrung", "lebenslauf schreiben"],
+        "en": ["resume", "cv", "curriculum vitae", "work experience", "professional experience", "resume writing"]
       },
       "responses": {
         "de": [
-          "Ein moderner Lebenslauf sollte tabellarisch, übersichtlich und maximal 2 Seiten lang sein. Beginnen Sie mit persönlichen Daten, gefolgt von Berufserfahrung, Ausbildung und besonderen Kenntnissen.",
-          "Im Lebenslauf listen Sie Ihre Stationen chronologisch rückwärts auf. Bei der Berufserfahrung sollten Sie konkrete Aufgaben und Erfolge nennen, nicht nur Jobtitel.",
-          "Ein professionelles Bewerbungsfoto ist in Deutschland üblich, aber nicht verpflichtend. Achten Sie auf ein einheitliches Design und verwenden Sie eine seriöse E-Mail-Adresse."
+          "Ein moderner Lebenslauf folgt einer klaren, professionellen Struktur. Beginnen Sie mit Ihren persönlichen Daten einschließlich Name, Kontaktdaten und gegebenenfalls einem professionellen Foto. Die Berufserfahrung wird chronologisch rückwärts aufgelistet, gefolgt von Ihrer Ausbildung oder Ihrem Studium. Anschließend führen Sie Ihre relevanten Kenntnisse und Fähigkeiten auf, gefolgt von Sprachkenntnissen und wichtigen Zertifikaten oder Weiterbildungen. Ein wichtiger Tipp: Quantifizieren Sie Ihre Erfolge immer mit konkreten Zahlen und Fakten, denn das macht Ihre Leistungen greifbar und überzeugend.",
+          "Bei der Lebenslauf-Optimierung sollten Sie mehrere wichtige Aspekte beachten. Verwenden Sie relevante Keywords, die ATS-Systeme erkennen können, damit Ihr Lebenslauf die automatische Vorauswahl besteht. Erklären Sie eventuelle Lücken ehrlich, aber immer positiv - zeigen Sie, was Sie in dieser Zeit gelernt oder erreicht haben. Beschreiben Sie Ihre Tätigkeiten immer mit konkreten Ergebnissen, nicht nur mit Aufgabenlisten. Das Design sollte übersichtlich und professionell sein, ohne überladen zu wirken. Verwenden Sie das PDF-Format und beschränken Sie sich auf maximal zwei Seiten. Halten Sie Ihren Lebenslauf immer auf dem neuesten Stand. Übrigens können Sie Ihren Lebenslauf kostenlos auf Fehler analysieren lassen unter https://www.easy-job.ai/resumes",
+          "Die Berufserfahrung ist das Herzstück Ihres Lebenslaufs und sollte strategisch dargestellt werden. Für jede Position geben Sie die genaue Berufsbezeichnung, das Unternehmen und den Zeitraum an. Beschreiben Sie Ihre Tätigkeiten in drei bis fünf prägnanten Punkten, wobei Sie den Fokus auf Ihre Erfolge und Ergebnisse legen, nicht nur auf reine Aufgabenbeschreibungen. Verwenden Sie aktive Verben wie 'entwickelte', 'führte' oder 'optimierte', um Dynamik zu vermitteln. Quantifizieren Sie Ihre Erfolge wann immer möglich - zum Beispiel 'Umsatz um 15% gesteigert' oder 'Team von 10 Mitarbeitern geleitet'. Stellen Sie dabei immer die Relevanz für Ihre Zielposition in den Vordergrund."
         ],
-        "en": [
-          "A modern resume should be tabular, clear, and maximum 2 pages long. Start with personal information, followed by work experience, education, and special skills.",
-          "In your resume, list your positions in reverse chronological order. For work experience, mention specific tasks and achievements, not just job titles.",
-          "A professional photo is common in Germany but not mandatory. Pay attention to consistent design and use a professional email address."
-        ]
+                  "en": [
+            "A modern resume follows a clear, professional structure that showcases your qualifications effectively. Start with your personal information including name, contact details, and optionally a professional photo. Your work experience should be listed in reverse chronological order, followed by your education or studies. Next, include your relevant skills and competencies, followed by language proficiencies and important certifications or training. An important tip: Always quantify your achievements with concrete numbers and facts, as this makes your accomplishments tangible and convincing to potential employers.",
+            "Resume optimization requires attention to several key aspects that can make the difference between getting an interview or being overlooked. Use relevant keywords that ATS systems can recognize, ensuring your resume passes the initial automated screening. Address any gaps in your employment history honestly but positively, showing what you learned or achieved during those periods. Always describe your activities with concrete results rather than just listing tasks. Keep the design clean and professional without being cluttered or overwhelming. Use PDF format and limit yourself to a maximum of two pages. Keep your resume current and up-to-date at all times. By the way, you can get your resume analyzed for errors for free at https://www.easy-job.ai/resumes",
+            "Your work experience is the centerpiece of your resume and should be presented strategically to maximum effect. For each position, provide the exact job title, company name, and time period of employment. Describe your responsibilities and achievements in three to five concise points, focusing on your successes and results rather than mere task descriptions. Use active verbs like 'developed', 'led', or 'optimized' to convey dynamism and initiative. Quantify your achievements whenever possible - for example, 'increased sales by 15%' or 'managed a team of 10 employees'. Always emphasize the relevance of your experience to your target position."
+          ]
       },
       "followUp": {
         "de": [
-          "Haben Sie Lücken im Lebenslauf, die Sie erklären müssen?",
-          "Möchten Sie wissen, wie Sie Ihre Berufserfahrung am besten darstellen?",
-          "Brauchen Sie Tipps für die Gestaltung Ihres Lebenslaufs?"
+          "Haben Sie Lücken im Lebenslauf, die erklärt werden müssen?",
+          "Möchten Sie Hilfe bei der Quantifizierung Ihrer Erfolge?",
+          "Brauchen Sie Tipps für ein professionelles Design?"
         ],
         "en": [
           "Do you have gaps in your resume that need explanation?",
-          "Would you like to know how to best present your work experience?",
-          "Do you need tips for designing your resume?"
+          "Would you like help quantifying your achievements?",
+          "Do you need tips for professional design?"
         ]
       }
     },
     {
       "intent": "interview",
       "keywords": {
-        "de": ["vorstellungsgespräch", "interview", "gespräch", "vorbereitung", "fragen"],
-        "en": ["job interview", "interview", "preparation", "questions", "meeting"]
+        "de": ["vorstellungsgespräch", "interview", "gespräch", "vorbereitung", "fragen", "bewerbungsgespräch"],
+        "en": ["job interview", "interview", "preparation", "questions", "meeting", "interview prep"]
       },
       "responses": {
         "de": [
-          "Bereiten Sie sich gut vor: Informieren Sie sich über das Unternehmen, die Position und überlegen Sie sich Antworten auf typische Fragen wie 'Warum wollen Sie bei uns arbeiten?'",
-          "Im Vorstellungsgespräch sollten Sie authentisch bleiben, konkrete Beispiele für Ihre Fähigkeiten geben und eigene Fragen zum Unternehmen stellen. Das zeigt Ihr Interesse.",
-          "Typische Fragen sind: Stärken/Schwächen, Motivation, Gehaltsvorstellungen und Zukunftspläne. Bereiten Sie ehrliche, aber positive Antworten vor."
+          "Eine perfekte Interview-Vorbereitung erfolgt in fünf systematischen Schritten, die Ihnen Sicherheit und Selbstvertrauen geben. Zunächst sollten Sie das Unternehmen gründlich recherchieren - studieren Sie die Website, aktuelle News und LinkedIn-Profile der Mitarbeiter. Bereiten Sie anschließend eigene Beispiele vor, idealerweise strukturiert nach der STAR-Methode. Üben Sie die Antworten auf typische Interview-Fragen, bis Sie diese flüssig und überzeugend beantworten können. Formulieren Sie intelligente Rückfragen, die Ihr Interesse und Ihre Vorbereitung zeigen. Planen Sie schließlich Ihr Outfit und die Anreise rechtzeitig. Wichtig: Sehen Sie das Interview als Gespräch auf Augenhöhe - Sie bewerten das Unternehmen genauso wie es Sie bewertet.",
+          "Die häufigsten Interview-Fragen haben alle eine strategische Bedeutung und erfordern durchdachte Antworten. Wenn Sie aufgefordert werden, von sich zu erzählen, präsentieren Sie einen kurzen, prägnanten Elevator Pitch, der Ihre wichtigsten beruflichen Stationen und Erfolge zusammenfasst. Bei der Frage nach Ihrer Motivation für das Unternehmen zeigen Sie, dass Sie sich intensiv vorbereitet haben und konkrete Bezüge zum Unternehmen herstellen können. Ihre Stärken sollten Sie immer mit konkreten Beispielen belegen - leere Behauptungen überzeugen nicht. Bei Fragen zu Ihren Zielen in fünf Jahren demonstrieren Sie realistische Vorstellungen und Ambitionen. Und haben Sie am Ende immer kluge Rückfragen parat - das zeigt echtes Interesse.",
+          "Die STAR-Methode ist ein bewährtes Framework für überzeugende Interview-Antworten, das Ihre Erfahrungen strukturiert und nachvollziehbar präsentiert. Beginnen Sie mit der Situation - beschreiben Sie den Kontext und die Ausgangslage Ihres Beispiels. Erläutern Sie dann die konkrete Task oder Aufgabe, die zu bewältigen war. Schildern Sie detailliert Ihre Action - welche spezifischen Schritte haben Sie unternommen? Schließen Sie mit dem Result ab - welches konkrete Ergebnis haben Sie erreicht? Ein Beispiel: 'In meiner letzten Position war die Kundenzufriedenheit rückläufig (Situation). Ich erhielt den Auftrag, dies zu verbessern (Task). Daraufhin entwickelte ich ein systematisches Feedback-System mit regelmäßigen Umfragen (Action). Das Resultat war eine Steigerung der Kundenzufriedenheit um 25% innerhalb von sechs Monaten (Result).'"
         ],
-        "en": [
-          "Prepare well: Research the company, the position, and think about answers to typical questions like 'Why do you want to work for us?'",
-          "In the job interview, stay authentic, give concrete examples of your skills, and ask your own questions about the company. This shows your interest.",
-          "Typical questions are: strengths/weaknesses, motivation, salary expectations, and future plans. Prepare honest but positive answers."
-        ]
+                  "en": [
+            "Perfect interview preparation follows five systematic steps that will give you confidence and self-assurance. First, thoroughly research the company by studying their website, recent news, and LinkedIn profiles of employees. Next, prepare your own examples, ideally structured using the STAR method. Practice answering typical interview questions until you can respond fluently and convincingly. Formulate intelligent questions that demonstrate your interest and preparation. Finally, plan your outfit and travel route well in advance. Important: View the interview as a conversation between equals - you're evaluating the company just as much as they're evaluating you.",
+            "The most common interview questions all have strategic significance and require thoughtful answers. When asked to tell about yourself, present a brief, compelling elevator pitch that summarizes your most important professional milestones and achievements. When questioned about your motivation for the company, show that you've prepared intensively and can make concrete connections to the organization. Always support your strengths with specific examples - empty claims aren't convincing. When asked about your goals in five years, demonstrate realistic aspirations and ambitions. And always have smart questions ready at the end - this shows genuine interest.",
+            "The STAR method is a proven framework for convincing interview answers that presents your experiences in a structured and comprehensible way. Begin with the Situation - describe the context and initial circumstances of your example. Then explain the specific Task or assignment that needed to be accomplished. Detail your Action - what specific steps did you take? Conclude with the Result - what concrete outcome did you achieve? For example: 'In my last position, customer satisfaction was declining (Situation). I was tasked with improving this (Task). I developed a systematic feedback system with regular surveys (Action). The result was a 25% increase in customer satisfaction within six months (Result).'"
+          ]
       },
       "followUp": {
         "de": [
           "Haben Sie schon ein Vorstellungsgespräch vereinbart?",
-          "Möchten Sie wissen, welche Fragen Sie dem Arbeitgeber stellen können?",
-          "Brauchen Sie Hilfe bei der Vorbereitung auf spezielle Fragetypen?"
+          "Möchten Sie typische Fragen für Ihre Branche üben?",
+          "Brauchen Sie Hilfe bei der STAR-Methode?"
         ],
         "en": [
           "Have you already scheduled a job interview?",
-          "Would you like to know what questions you can ask the employer?",
-          "Do you need help preparing for specific types of questions?"
+          "Would you like to practice typical questions for your industry?",
+          "Do you need help with the STAR method?"
         ]
       }
     },
     {
       "intent": "salary",
       "keywords": {
-        "de": ["gehalt", "lohn", "gehaltsverhandlung", "gehaltsvorstellung", "verdienst"],
-        "en": ["salary", "wage", "salary negotiation", "salary expectations", "compensation", "pay"]
+        "de": ["gehalt", "lohn", "gehaltsverhandlung", "gehaltsvorstellung", "verdienst", "bezahlung", "vergütung"],
+        "en": ["salary", "wage", "salary negotiation", "salary expectations", "compensation", "pay", "remuneration"]
       },
       "responses": {
         "de": [
-          "Bei Gehaltsverhandlungen ist Vorbereitung alles: Recherchieren Sie branchenübliche Gehälter, dokumentieren Sie Ihre Leistungen und wählen Sie den richtigen Zeitpunkt für das Gespräch.",
-          "Ihre Gehaltsvorstellung sollte realistisch sein und auf Marktdaten basieren. Nutzen Sie Gehaltsstudien, Jobportale und Ihr Netzwerk für die Recherche.",
-          "In Gehaltsverhandlungen sollten Sie mit Argumenten überzeugen: Ihre Qualifikationen, Erfolge und der Mehrwert für das Unternehmen. Seien Sie selbstbewusst, aber realistisch."
+          "Eine erfolgreiche Gehaltsverhandlung basiert auf sorgfältiger Vorbereitung und professioneller Durchführung. Die Vorbereitung ist dabei absolut entscheidend für Ihren Erfolg. Recherchieren Sie zunächst marktübliche Gehälter für Ihre Position und Branche über Plattformen wie Kununu oder StepStone. Dokumentieren Sie Ihre Qualifikationen, Erfolge und den Mehrwert, den Sie dem Unternehmen bieten. Wählen Sie den Gesprächszeitpunkt strategisch - idealerweise nach einem Erfolg oder während der jährlichen Mitarbeitergespräche. Im eigentlichen Gespräch argumentieren Sie selbstbewusst, aber realistisch, und betonen Sie kontinuierlich den Mehrwert, den Sie für das Unternehmen schaffen. Falls Ihr Gehaltwunsch abgelehnt wird, fragen Sie nach alternativen Benefits oder einem späteren Zeitpunkt für eine Neubewertung.",
+          "Die richtige Formulierung Ihrer Gehaltsvorstellung ist entscheidend für den ersten Eindruck und den Verhandlungsspielraum. In der schriftlichen Bewerbung formulieren Sie höflich und professionell: 'Meine Gehaltsvorstellung liegt bei X.000 Euro brutto jährlich.' Im persönlichen Gespräch können Sie detaillierter werden: 'Basierend auf meiner Erfahrung und einer gründlichen Marktrecherche stelle ich mir ein Gehalt zwischen X.000 und Y.000 Euro vor.' Ein wichtiger Tipp: Geben Sie immer eine Spanne an, niemals einen festen Betrag. Das zeigt Flexibilität und gibt beiden Seiten Verhandlungsspielraum. Die Spanne sollte etwa 5.000 bis 10.000 Euro betragen, je nach Gehaltsniveau.",
+          "Das Gehalt wird von verschiedenen Faktoren beeinflusst, die Sie bei Ihrer Vorbereitung berücksichtigen sollten. Ihre Berufserfahrung und Qualifikationen sind die wichtigsten Grundlagen. Die Unternehmensgröße und Branche spielen eine erhebliche Rolle - ein Konzern zahlt oft mehr als ein kleines Unternehmen, und manche Branchen sind generell besser bezahlt. Der Standort macht einen großen Unterschied - München oder Frankfurt bieten höhere Gehälter als ländliche Regionen, haben aber auch höhere Lebenshaltungskosten. Ihr Verantwortungsbereich und die aktuelle Marktsituation in Ihrem Fachbereich sind ebenfalls entscheidend. Vergessen Sie nicht, dass Sie neben dem Grundgehalt auch andere Benefits verhandeln können: Bonus-Zahlungen, einen Firmenwagen, ein Weiterbildungsbudget oder flexible Arbeitszeiten können den Gesamtwert Ihres Arbeitspakets erheblich steigern."
         ],
         "en": [
-          "Preparation is everything in salary negotiations: Research industry-standard salaries, document your achievements, and choose the right time for the conversation.",
-          "Your salary expectations should be realistic and based on market data. Use salary studies, job portals, and your network for research.",
-          "In salary negotiations, convince with arguments: your qualifications, achievements, and added value for the company. Be confident but realistic."
+          "Salary Negotiation - Professional and Successful:\n\n💡 Preparation is everything:\n• Research market salaries (Glassdoor, PayScale)\n• Document your qualifications and achievements\n• Choose conversation timing strategically\n\n🎯 In the conversation:\n• Argue confidently but realistically\n• Emphasize added value for the company\n• Ask for alternatives if rejected",
+          "Formulate Salary Expectations Correctly:\n\n📝 In the application:\n'My salary expectation is $X,000 annually.'\n\n💬 In the interview:\n'Based on my experience and market research, I envision a salary between $X,000 and $Y,000.'\n\nTip: Always give a range, not a fixed amount!",
+          "Salary Factors That Count:\n\n💼 Experience and qualifications\n🏢 Company size and industry\n📍 Location (major city vs. rural area)\n🎯 Scope of responsibility\n📈 Market situation in your field\n\nNegotiate beyond base salary:\n• Bonus payments\n• Company car\n• Training budget\n• Flexible working hours"
         ]
       },
       "followUp": {
         "de": [
-          "Stehen Sie gerade vor einer Gehaltsverhandlung?",
-          "Möchten Sie wissen, wie Sie Ihr aktuelles Gehalt einschätzen können?",
-          "Brauchen Sie Tipps für die Argumentation in Gehaltsverhandlungen?"
+          "Stehen Sie vor einer konkreten Gehaltsverhandlung?",
+          "Möchten Sie Hilfe bei der Marktrecherche?",
+          "Brauchen Sie Unterstützung bei der Argumentation?"
         ],
         "en": [
-          "Are you currently facing a salary negotiation?",
-          "Would you like to know how to assess your current salary?",
-          "Do you need tips for argumentation in salary negotiations?"
+          "Are you facing a specific salary negotiation?",
+          "Would you like help with market research?",
+          "Do you need support with argumentation?"
         ]
       }
     },
     {
       "intent": "career_planning",
       "keywords": {
-        "de": ["karriere", "karriereplanung", "weiterentwicklung", "aufstieg", "ziele"],
-        "en": ["career", "career planning", "development", "advancement", "goals", "growth"]
+        "de": ["karriere", "karriereplanung", "weiterentwicklung", "aufstieg", "ziele", "laufbahn", "berufliche entwicklung"],
+        "en": ["career", "career planning", "development", "advancement", "goals", "growth", "professional development"]
       },
       "responses": {
         "de": [
-          "Eine erfolgreiche Karriereplanung beginnt mit der Definition Ihrer beruflichen Ziele. Analysieren Sie Ihre Stärken, identifizieren Sie Entwicklungsbereiche und erstellen Sie einen konkreten Plan.",
-          "Für Ihre Karriereentwicklung sind wichtig: Kontinuierliche Weiterbildung, Netzwerk-Aufbau, Sichtbarkeit im Unternehmen und regelmäßige Reflexion Ihrer Ziele.",
-          "Karriereplanung ist ein kontinuierlicher Prozess. Setzen Sie sich kurz- und langfristige Ziele, evaluieren Sie regelmäßig Ihren Fortschritt und passen Sie Ihre Strategie an."
+          "Strategische Karriereplanung - Ihr Weg zum Erfolg:\n\n🎯 Ziele definieren:\n• Wo möchten Sie in 1, 3, 5 Jahren stehen?\n• Welche Position streben Sie an?\n• Was ist Ihnen wichtig? (Gehalt, Work-Life-Balance, Verantwortung)\n\n📊 Ist-Analyse:\n• Aktuelle Stärken und Schwächen\n• Marktfähigkeit Ihrer Skills\n• Netzwerk-Qualität",
+          "Karriere-Entwicklung systematisch angehen:\n\n1️⃣ Selbstreflexion: Was motiviert Sie?\n2️⃣ Marktanalyse: Welche Trends gibt es?\n3️⃣ Skill-Gap-Analyse: Was müssen Sie lernen?\n4️⃣ Netzwerk ausbauen: Wer kann helfen?\n5️⃣ Aktionsplan erstellen: Konkrete Schritte\n6️⃣ Regelmäßige Reviews: Ziele anpassen",
+          "Karriere-Booster für 2025:\n\n🚀 Digitale Skills (KI, Data Analytics)\n🌐 Internationale Erfahrung\n👥 Leadership-Kompetenzen\n🎓 Kontinuierliche Weiterbildung\n💼 Persönliche Marke aufbauen\n🤝 Strategisches Netzwerken\n\nDenken Sie daran: Karriere ist ein Marathon, kein Sprint!"
         ],
         "en": [
-          "Successful career planning begins with defining your professional goals. Analyze your strengths, identify development areas, and create a concrete plan.",
-          "Important for your career development: Continuous education, network building, visibility in the company, and regular reflection on your goals.",
-          "Career planning is a continuous process. Set short and long-term goals, regularly evaluate your progress, and adapt your strategy."
+          "Strategic Career Planning - Your Path to Success:\n\n🎯 Define goals:\n• Where do you want to be in 1, 3, 5 years?\n• What position are you aiming for?\n• What's important to you? (Salary, work-life balance, responsibility)\n\n📊 Current state analysis:\n• Current strengths and weaknesses\n• Market value of your skills\n• Network quality",
+          "Approach Career Development Systematically:\n\n1️⃣ Self-reflection: What motivates you?\n2️⃣ Market analysis: What trends exist?\n3️⃣ Skill gap analysis: What do you need to learn?\n4️⃣ Expand network: Who can help?\n5️⃣ Create action plan: Concrete steps\n6️⃣ Regular reviews: Adjust goals",
+          "Career Boosters for 2025:\n\n🚀 Digital skills (AI, Data Analytics)\n🌐 International experience\n👥 Leadership competencies\n🎓 Continuous education\n💼 Build personal brand\n🤝 Strategic networking\n\nRemember: Career is a marathon, not a sprint!"
         ]
       },
       "followUp": {
         "de": [
           "Haben Sie schon konkrete Karriereziele definiert?",
-          "Möchten Sie wissen, wie Sie Ihre beruflichen Stärken identifizieren?",
-          "Brauchen Sie Hilfe bei der Erstellung eines Karriereplans?"
+          "In welchem Bereich möchten Sie sich weiterentwickeln?",
+          "Brauchen Sie Hilfe bei der Skill-Gap-Analyse?"
         ],
         "en": [
           "Have you already defined concrete career goals?",
-          "Would you like to know how to identify your professional strengths?",
-          "Do you need help creating a career plan?"
+          "In which area would you like to develop further?",
+          "Do you need help with skill gap analysis?"
+        ]
+      }
+    },
+    {
+      "intent": "networking",
+      "keywords": {
+        "de": ["netzwerk", "networking", "kontakte", "beziehungen", "vitamin b", "networking events"],
+        "en": ["networking", "network", "contacts", "connections", "relationships", "networking events"]
+      },
+      "responses": {
+        "de": [
+          "Erfolgreiches Networking - Authentisch und strategisch:\n\n🎯 Networking-Mindset:\n• Geben vor Nehmen - helfen Sie anderen\n• Langfristige Beziehungen aufbauen\n• Authentisch bleiben, nicht verstellen\n• Qualität vor Quantität\n\n📱 Online-Networking:\n• LinkedIn aktiv nutzen\n• Branchengruppen beitreten\n• Content teilen und kommentieren",
+          "Networking-Strategien die funktionieren:\n\n🏢 Beruflich:\n• Branchenevents besuchen\n• Alumni-Netzwerke aktivieren\n• Mentoring-Programme\n• Fachkonferenzen\n\n🤝 Persönlich:\n• Small Talk üben\n• Nachfassen nach Events\n• Andere vernetzen (Connector werden)\n• Regelmäßiger Kontakt halten",
+          "LinkedIn-Profil optimieren für Networking:\n\n📸 Professionelles Foto\n📝 Aussagekräftige Headline\n💼 Vollständiger Werdegang\n🎯 Skills & Empfehlungen\n📄 Regelmäßige Posts\n💬 Aktive Interaktion\n\nTipp: Personalisierte Kontaktanfragen mit Bezug zum gemeinsamen Kontext!"
+        ],
+        "en": [
+          "Successful Networking - Authentic and Strategic:\n\n🎯 Networking Mindset:\n• Give before taking - help others\n• Build long-term relationships\n• Stay authentic, don't pretend\n• Quality over quantity\n\n📱 Online Networking:\n• Use LinkedIn actively\n• Join industry groups\n• Share and comment on content",
+          "Networking Strategies That Work:\n\n🏢 Professional:\n• Attend industry events\n• Activate alumni networks\n• Mentoring programs\n• Professional conferences\n\n🤝 Personal:\n• Practice small talk\n• Follow up after events\n• Connect others (become a connector)\n• Keep regular contact",
+          "Optimize LinkedIn Profile for Networking:\n\n📸 Professional photo\n📝 Compelling headline\n💼 Complete career history\n🎯 Skills & recommendations\n📄 Regular posts\n💬 Active interaction\n\nTip: Personalized connection requests with reference to shared context!"
+        ]
+      },
+      "followUp": {
+        "de": [
+          "Welche Networking-Ziele haben Sie?",
+          "Sind Sie schon auf LinkedIn aktiv?",
+          "Möchten Sie Tipps für konkrete Networking-Events?"
+        ],
+        "en": [
+          "What are your networking goals?",
+          "Are you already active on LinkedIn?",
+          "Would you like tips for specific networking events?"
+        ]
+      }
+    },
+    {
+      "intent": "linkedin_profile",
+      "keywords": {
+        "de": ["linkedin", "xing", "profil", "online profil", "social media", "berufsnetzwerk"],
+        "en": ["linkedin", "profile", "online profile", "social media", "professional network"]
+      },
+      "responses": {
+        "de": [
+          "LinkedIn-Profil perfekt optimieren:\n\n📸 Profilfoto:\n• Professionell, freundlich, hochauflösend\n• Blickkontakt zur Kamera\n• Neutrale Hintergrund\n• Business-Kleidung\n\n📝 Headline (120 Zeichen):\n• Nicht nur Jobtitel\n• Keywords für Ihre Zielposition\n• Einzigartigen Mehrwert kommunizieren",
+          "LinkedIn-Zusammenfassung die überzeugt:\n\n💡 Struktur:\n• Haken-Satz am Anfang\n• Ihre berufliche Geschichte\n• Kernkompetenzen mit Keywords\n• Erfolge quantifiziert\n• Call-to-Action am Ende\n\n📊 Tipp: 3-5 Absätze, max. 2000 Zeichen\nPersonal ansprache: 'Ich' statt 'Er/Sie'",
+          "LinkedIn-Aktivität für Sichtbarkeit:\n\n📝 Content-Strategie:\n• 2-3 Posts pro Woche\n• Branchenrelevante Themen\n• Persönliche Insights teilen\n• Auf andere Posts kommentieren\n• Artikel verfassen (langform)\n\n🎯 Engagement:\n• Glückwünsche zu Beförderungen\n• Geburtstagswünsche\n• Shares mit eigenem Kommentar"
+        ],
+        "en": [
+          "Optimize LinkedIn Profile Perfectly:\n\n📸 Profile Photo:\n• Professional, friendly, high-resolution\n• Eye contact with camera\n• Neutral background\n• Business attire\n\n📝 Headline (120 characters):\n• Not just job title\n• Keywords for your target position\n• Communicate unique value",
+          "LinkedIn Summary That Convinces:\n\n💡 Structure:\n• Hook sentence at beginning\n• Your professional story\n• Core competencies with keywords\n• Quantified achievements\n• Call-to-action at the end\n\n📊 Tip: 3-5 paragraphs, max. 2000 characters\nPersonal approach: 'I' instead of 'He/She'",
+          "LinkedIn Activity for Visibility:\n\n📝 Content Strategy:\n• 2-3 posts per week\n• Industry-relevant topics\n• Share personal insights\n• Comment on other posts\n• Write articles (long-form)\n\n🎯 Engagement:\n• Congratulations on promotions\n• Birthday wishes\n• Shares with own comment"
+        ]
+      },
+      "followUp": {
+        "de": [
+          "Haben Sie schon ein LinkedIn-Profil erstellt?",
+          "Möchten Sie Hilfe bei der Headline-Formulierung?",
+          "Brauchen Sie Unterstützung bei der Content-Strategie?"
+        ],
+        "en": [
+          "Have you already created a LinkedIn profile?",
+          "Would you like help formulating your headline?",
+          "Do you need support with content strategy?"
+        ]
+      }
+    },
+    {
+      "intent": "skills_development",
+      "keywords": {
+        "de": ["fähigkeiten", "skills", "kompetenzen", "weiterbildung", "lernen", "fortbildung", "qualifikation"],
+        "en": ["skills", "competencies", "development", "learning", "training", "education", "qualifications"]
+      },
+      "responses": {
+        "de": [
+          "Skills für die Zukunft - Bleiben Sie relevant:\n\n🚀 Top-Skills 2025:\n• Künstliche Intelligenz & Machine Learning\n• Data Analytics & Visualization\n• Cloud Computing (AWS, Azure)\n• Cybersecurity\n• Digital Marketing\n• Projektmanagement (Agile/Scrum)\n• Emotional Intelligence\n• Change Management",
+          "Effektive Weiterbildungsstrategien:\n\n📚 Online-Lernen:\n• Coursera, Udemy, LinkedIn Learning\n• Kostenlose Kurse (MIT, Stanford)\n• YouTube-Tutorials für Basics\n• Podcasts für unterwegs\n\n🎓 Formal:\n• Zertifizierungen (Google, Microsoft, Amazon)\n• Abendstudium/Fernstudium\n• IHK-Weiterbildungen\n• Branchenspezifische Kurse",
+          "Soft Skills nicht vergessen:\n\n💬 Kommunikation:\n• Präsentationstechniken\n• Verhandlungsführung\n• Konfliktmanagement\n\n👥 Leadership:\n• Teamführung\n• Coaching & Mentoring\n• Strategisches Denken\n\n🧠 Persönlich:\n• Zeitmanagement\n• Stressresistenz\n• Kreativität & Innovation"
+        ],
+        "en": [
+          "Skills for the Future - Stay Relevant:\n\n🚀 Top Skills 2025:\n• Artificial Intelligence & Machine Learning\n• Data Analytics & Visualization\n• Cloud Computing (AWS, Azure)\n• Cybersecurity\n• Digital Marketing\n• Project Management (Agile/Scrum)\n• Emotional Intelligence\n• Change Management",
+          "Effective Learning Strategies:\n\n📚 Online Learning:\n• Coursera, Udemy, LinkedIn Learning\n• Free courses (MIT, Stanford)\n• YouTube tutorials for basics\n• Podcasts on the go\n\n🎓 Formal:\n• Certifications (Google, Microsoft, Amazon)\n• Evening/distance learning\n• Professional development courses\n• Industry-specific training",
+          "Don't Forget Soft Skills:\n\n💬 Communication:\n• Presentation techniques\n• Negotiation skills\n• Conflict management\n\n👥 Leadership:\n• Team management\n• Coaching & mentoring\n• Strategic thinking\n\n🧠 Personal:\n• Time management\n• Stress resistance\n• Creativity & innovation"
+        ]
+      },
+      "followUp": {
+        "de": [
+          "Welche Skills möchten Sie entwickeln?",
+          "Haben Sie schon Online-Kurse belegt?",
+          "Brauchen Sie Hilfe bei der Auswahl von Zertifizierungen?"
+        ],
+        "en": [
+          "Which skills would you like to develop?",
+          "Have you already taken online courses?",
+          "Do you need help choosing certifications?"
+        ]
+      }
+    },
+    {
+      "intent": "remote_work",
+      "keywords": {
+        "de": ["remote", "homeoffice", "home office", "fernarbeit", "mobiles arbeiten", "telearbeit"],
+        "en": ["remote work", "home office", "telecommuting", "work from home", "distributed work"]
+      },
+      "responses": {
+        "de": [
+          "Remote Work erfolgreich bewerben:\n\n💼 In der Bewerbung:\n• Remote-Erfahrung hervorheben\n• Selbstorganisation betonen\n• Kommunikationsfähigkeiten zeigen\n• Technische Ausstattung erwähnen\n• Erfolge im Remote-Kontext nennen\n\n🏠 Home-Office Setup:\n• Professioneller Arbeitsplatz\n• Stabile Internetverbindung\n• Gute Kamera/Mikrofon für Videocalls",
+          "Remote Work Skills entwickeln:\n\n⏰ Selbstmanagement:\n• Feste Arbeitszeiten einhalten\n• To-Do-Listen und Prioritäten\n• Ablenkungen minimieren\n• Work-Life-Balance wahren\n\n💬 Kommunikation:\n• Proaktiv kommunizieren\n• Status-Updates geben\n• Digitale Tools beherrschen (Slack, Teams)\n• Virtuelle Meetings moderieren",
+          "Remote-Job finden:\n\n🔍 Spezielle Jobportale:\n• RemoteOK, AngelList Remote\n• FlexJobs, Remote.co\n• Upwork, Freelancer (für Freelance)\n\n🎯 Bewerbungsstrategie:\n• Internationale Unternehmen ansprechen\n• Startup-Szene berücksichtigen\n• Portfolio online verfügbar machen\n• Referenzen von Remote-Projekten"
+        ],
+        "en": [
+          "Successfully Apply for Remote Work:\n\n💼 In the application:\n• Highlight remote experience\n• Emphasize self-organization\n• Show communication skills\n• Mention technical equipment\n• Cite successes in remote context\n\n🏠 Home Office Setup:\n• Professional workspace\n• Stable internet connection\n• Good camera/microphone for video calls",
+          "Develop Remote Work Skills:\n\n⏰ Self-management:\n• Keep fixed working hours\n• To-do lists and priorities\n• Minimize distractions\n• Maintain work-life balance\n\n💬 Communication:\n• Communicate proactively\n• Give status updates\n• Master digital tools (Slack, Teams)\n• Moderate virtual meetings",
+          "Find Remote Jobs:\n\n🔍 Specialized Job Portals:\n• RemoteOK, AngelList Remote\n• FlexJobs, Remote.co\n• Upwork, Freelancer (for freelance)\n\n🎯 Application Strategy:\n• Target international companies\n• Consider startup scene\n• Make portfolio available online\n• References from remote projects"
+        ]
+      },
+      "followUp": {
+        "de": [
+          "Haben Sie schon Remote-Erfahrung gesammelt?",
+          "Suchen Sie nach Vollzeit-Remote oder Hybrid-Modellen?",
+          "Brauchen Sie Tipps für die technische Ausstattung?"
+        ],
+        "en": [
+          "Have you already gained remote experience?",
+          "Are you looking for full-time remote or hybrid models?",
+          "Do you need tips for technical equipment?"
+        ]
+      }
+    },
+    {
+      "intent": "career_change",
+      "keywords": {
+        "de": ["berufswechsel", "quereinstieg", "umorientierung", "branchenwechsel", "neuanfang", "karrierewechsel"],
+        "en": ["career change", "career transition", "career switch", "industry change", "career pivot"]
+      },
+      "responses": {
+        "de": [
+          "Berufswechsel erfolgreich gestalten:\n\n🎯 Vorbereitung:\n• Gründe für Wechsel klar definieren\n• Zielbranche intensiv recherchieren\n• Übertragbare Skills identifizieren\n• Finanzielle Situation planen\n• Netzwerk in neuer Branche aufbauen\n\n📝 Bewerbungsstrategie:\n• Motivation überzeugend erklären\n• Transferable Skills hervorheben\n• Quereinsteiger-freundliche Unternehmen suchen",
+          "Transferable Skills identifizieren:\n\n💪 Universell wertvoll:\n• Projektmanagement\n• Kommunikation & Präsentation\n• Analytisches Denken\n• Problemlösung\n• Teamarbeit\n• Kundenorientierung\n\n🔄 Skills-Transfer zeigen:\n'In meiner Zeit als [alter Job] habe ich [Skill] entwickelt, der in [neuer Bereich] wertvoll ist, weil...'",
+          "Quereinstieg-Strategien:\n\n📚 Vorbereitung:\n• Branchenwissen aneignen\n• Relevante Zertifikate erwerben\n• Praktika/Hospitationen absolvieren\n• Informationsinterviews führen\n\n🚪 Einstiegsmöglichkeiten:\n• Trainee-Programme\n• Junior-Positionen\n• Consulting (Brücke zwischen Branchen)\n• Startup-Umfeld (offener für Quereinsteiger)"
+        ],
+        "en": [
+          "Successfully Manage Career Change:\n\n🎯 Preparation:\n• Clearly define reasons for change\n• Research target industry intensively\n• Identify transferable skills\n• Plan financial situation\n• Build network in new industry\n\n📝 Application Strategy:\n• Convincingly explain motivation\n• Highlight transferable skills\n• Seek career-changer-friendly companies",
+          "Identify Transferable Skills:\n\n💪 Universally Valuable:\n• Project management\n• Communication & presentation\n• Analytical thinking\n• Problem solving\n• Teamwork\n• Customer orientation\n\n🔄 Show Skills Transfer:\n'In my time as [old job] I developed [skill] which is valuable in [new field] because...'",
+          "Career Change Strategies:\n\n📚 Preparation:\n• Acquire industry knowledge\n• Obtain relevant certificates\n• Complete internships/job shadowing\n• Conduct informational interviews\n\n🚪 Entry Opportunities:\n• Trainee programs\n• Junior positions\n• Consulting (bridge between industries)\n• Startup environment (more open to career changers)"
+        ]
+      },
+      "followUp": {
+        "de": [
+          "In welche Branche möchten Sie wechseln?",
+          "Haben Sie schon transferable Skills identifiziert?",
+          "Brauchen Sie Hilfe bei der Begründung des Wechsels?"
+        ],
+        "en": [
+          "Which industry would you like to switch to?",
+          "Have you already identified transferable skills?",
+          "Do you need help justifying the change?"
+        ]
+      }
+    },
+    {
+      "intent": "work_life_balance",
+      "keywords": {
+        "de": ["work life balance", "vereinbarkeit", "flexible arbeitszeit", "teilzeit", "auszeit"],
+        "en": ["work life balance", "work life", "flexible hours", "part time", "sabbatical"]
+      },
+      "responses": {
+        "de": [
+          "Work-Life-Balance in der Bewerbung:\n\n💼 Flexible Arbeitsmodelle verhandeln:\n• Homeoffice-Optionen\n• Flexible Arbeitszeiten\n• 4-Tage-Woche\n• Gleitzeit\n• Teilzeit-Modelle\n\n🎯 Richtig kommunizieren:\n• Fokus auf Produktivität\n• Win-Win-Situation aufzeigen\n• Probezeit vorschlagen",
+          "Grenzen professionell setzen:\n\n⏰ Zeitmanagement:\n• Feste Arbeitszeiten kommunizieren\n• E-Mail-Zeiten definieren\n• Urlaub konsequent nehmen\n• Nein sagen lernen\n\n🧘 Stressprävention:\n• Pausen einhalten\n• Sport & Bewegung\n• Hobbys pflegen\n• Soziale Kontakte\n• Entspannungstechniken"
+        ],
+        "en": [
+          "Work-Life Balance in Applications:\n\n💼 Negotiate Flexible Work Models:\n• Home office options\n• Flexible working hours\n• 4-day work week\n• Flextime\n• Part-time models\n\n🎯 Communicate Correctly:\n• Focus on productivity\n• Show win-win situation\n• Suggest trial period",
+          "Set Boundaries Professionally:\n\n⏰ Time Management:\n• Communicate fixed working hours\n• Define email times\n• Take vacation consistently\n• Learn to say no\n\n🧘 Stress Prevention:\n• Keep breaks\n• Sports & exercise\n• Maintain hobbies\n• Social contacts\n• Relaxation techniques"
+        ]
+      },
+      "followUp": {
+        "de": [
+          "Welche Work-Life-Balance ist Ihnen wichtig?",
+          "Suchen Sie nach Teilzeit-Möglichkeiten?",
+          "Brauchen Sie Tipps für flexible Arbeitsmodelle?"
+        ],
+        "en": [
+          "What work-life balance is important to you?",
+          "Are you looking for part-time opportunities?",
+          "Do you need tips for flexible work models?"
         ]
       }
     },
@@ -241,6 +425,161 @@
         "en": [
           "Which language would you like to continue in?",
           "Möchten Sie auf Deutsch oder Englisch fortfahren?"
+        ]
+      }
+    },
+    {
+      "intent": "easy_job_platform",
+      "keywords": {
+        "de": ["easy-job", "easy job", "plattform", "bewerbungsplattform", "automatisiert", "ki bewerbung", "beta", "easy-job.ai"],
+        "en": ["easy-job", "easy job", "platform", "application platform", "automated", "ai application", "beta", "easy-job.ai"]
+      },
+      "responses": {
+        "de": [
+          "Easy-Job.ai ist eine innovative, automatisierte Bewerbungsplattform, die künstliche Intelligenz nutzt, um Ihnen den Bewerbungsprozess erheblich zu erleichtern. Die Plattform erstellt personalisierte Anschreiben in wenigen Sekunden, die speziell auf jede Stellenausschreibung zugeschnitten sind. Zusätzlich bietet Easy-Job.ai eine intelligente Job-Matching-Technologie, die passende Stellen für Ihr Profil identifiziert. Die automatische Bewerbungsversendung spart Ihnen Zeit und Aufwand, während die integrierte Lebenslauf-Analyse dabei hilft, Ihr Profil zu optimieren. Ein übersichtliches Dashboard gibt Ihnen jederzeit den Überblick über alle Ihre Bewerbungen, und die Jobsuche mit Smart-Matching macht das Finden passender Positionen effizienter. Die Plattform unterstützt mehrere Sprachen und ist auch als mobile App verfügbar.",
+          "Easy-Job.ai hebt sich in mehreren wichtigen Punkten von allgemeinen KI-Tools wie ChatGPT ab. Die Plattform ist speziell für Bewerbungen optimiert und berücksichtigt Ihre persönlichen Erfahrungen und Qualifikationen bei der Anschreiben-Erstellung. Anders als bei allgemeinen KI-Tools erhalten Sie hier eine integrierte Lösung mit Jobsuche und Bewerbungsmanagement in einem System. Das faire Credit-System sorgt für transparente Kosten ohne versteckte Gebühren. In Sachen Sicherheit und Vertrauen setzt Easy-Job.ai auf DSGVO-konforme Datenspeicherung, bei der Ihre Bewerbungen vollständig privat und geschützt bleiben. Als seriöses deutsches Unternehmen stehen Datenschutz und transparente Preisgestaltung im Vordergrund.",
+          "Easy-Job.ai befindet sich derzeit in der BETA-Phase, was sowohl für die Plattform als auch für die Nutzer verschiedene Vorteile bietet. Sie profitieren von kontinuierlichen Verbesserungen und können direktes Feedback an das Entwicklerteam geben, was die Plattform stetig optimiert. Als BETA-Nutzer erhalten Sie frühen Zugang zu neuen Features und sind Teil einer aktiven Community-Entwicklung. Die Roadmap für die kommenden Monate umfasst regelmäßige Updates der KI-Modelle für noch bessere Anschreiben, erweiterte Automatisierungsfeatures für einen noch effizienteren Bewerbungsprozess, die Expansion in neue Sprachen und Märkte sowie die Entwicklung von Enterprise-Lösungen für Unternehmen. Die BETA-Phase ermöglicht es, die Plattform gemeinsam mit den Nutzern zu dem bestmöglichen Bewerbungstool zu entwickeln."
+        ],
+        "en": [
+          "Easy-Job.ai is an automated application platform with AI-generated cover letters:\n\n🤖 AI Features:\n• Personalized cover letters in seconds\n• Intelligent job-matching technology\n• Automatic application sending\n• Resume analysis and optimization\n\n📋 Platform Services:\n• Dashboard for all applications\n• Job search with smart matching\n• Multi-language support\n• Mobile app available",
+          "What makes Easy-Job.ai special:\n\n🎯 Unlike ChatGPT:\n• Specifically optimized for applications\n• Considers personal experiences\n• Integrated job search and application management\n• Credit-based system for fair usage\n\n🔒 Security & Trust:\n• GDPR-compliant data storage\n• Applications are private and protected\n• Serious German company\n• Transparent pricing",
+          "Easy-Job.ai is currently in BETA phase:\n\n⚡ BETA Advantages:\n• Continuous improvements\n• Direct feedback to development team\n• Early access to new features\n• Active community development\n\n🚀 Roadmap:\n• Regular AI model updates\n• Extended automation features\n• New languages and markets\n• Enterprise solutions"
+        ]
+      },
+      "followUp": {
+        "de": [
+          "Möchten Sie Easy-Job.ai kostenlos testen?",
+          "Haben Sie Fragen zu bestimmten Features?",
+          "Interessieren Sie sich für das Credit-System?"
+        ],
+        "en": [
+          "Would you like to try Easy-Job.ai for free?",
+          "Do you have questions about specific features?",
+          "Are you interested in the credit system?"
+        ]
+      }
+    },
+    {
+      "intent": "ki_features",
+      "keywords": {
+        "de": ["ki anschreiben", "ai anschreiben", "automatisch", "generierung", "künstliche intelligenz", "ki bewerbung"],
+        "en": ["ai cover letter", "automatic", "generation", "artificial intelligence", "ai application"]
+      },
+      "responses": {
+        "de": [
+          "KI-Anschreiben-Generierung bei Easy-Job.ai:\n\n🧠 Wie es funktioniert:\n• Analyse der Stellenausschreibung\n• Berücksichtigung Ihres Lebenslaufs\n• Personalisierung basierend auf Erfahrungen\n• Anpassung an Unternehmenskultur\n• Generierung in wenigen Sekunden\n\n✨ KI-Qualität:\n• Professionelle Formulierungen\n• Branchen-spezifische Anpassungen\n• Individuelle Erfolge hervorgehoben\n• Rechtschreibung und Grammatik perfekt",
+          "Personalisierte KI-Anschreiben:\n\n📝 Berücksichtigte Faktoren:\n• Ihre beruflichen Erfahrungen\n• Skills und Qualifikationen\n• Branche und Position\n• Unternehmensgröße und -kultur\n• Stellenanforderungen\n\n🔄 Verbesserungsprozess:\n• Regelmäßige KI-Model-Updates\n• Feedback-Integration\n• A/B-Testing für Optimierung\n• Kontinuierliche Qualitätssteigerung",
+          "Was tun bei unzufriedenstellenden Anschreiben:\n\n🛠️ Optimierungsmöglichkeiten:\n• Lebenslauf detaillierter gestalten\n• Mehr persönliche Erfahrungen hinzufügen\n• Stellenausschreibung präziser eingeben\n• Support-Team kontaktieren\n• Regenerierung mit angepassten Parametern\n\n💡 Pro-Tipps:\n• Keywords aus Stellenanzeige verwenden\n• Soft Skills explizit erwähnen\n• Quantifizierte Erfolge angeben"
+        ],
+        "en": [
+          "AI Cover Letter Generation at Easy-Job.ai:\n\n🧠 How it works:\n• Analysis of job posting\n• Consideration of your resume\n• Personalization based on experiences\n• Adaptation to company culture\n• Generation in seconds\n\n✨ AI Quality:\n• Professional formulations\n• Industry-specific adaptations\n• Individual achievements highlighted\n• Perfect spelling and grammar",
+          "Personalized AI Cover Letters:\n\n📝 Considered Factors:\n• Your professional experiences\n• Skills and qualifications\n• Industry and position\n• Company size and culture\n• Job requirements\n\n🔄 Improvement Process:\n• Regular AI model updates\n• Feedback integration\n• A/B testing for optimization\n• Continuous quality improvement",
+          "What to do with unsatisfactory cover letters:\n\n🛠️ Optimization Options:\n• Make resume more detailed\n• Add more personal experiences\n• Enter job posting more precisely\n• Contact support team\n• Regenerate with adjusted parameters\n\n💡 Pro Tips:\n• Use keywords from job ads\n• Explicitly mention soft skills\n• Provide quantified achievements"
+        ]
+      },
+      "followUp": {
+        "de": [
+          "Möchten Sie die KI-Anschreiben-Funktion ausprobieren?",
+          "Haben Sie Fragen zur Qualität der generierten Texte?",
+          "Brauchen Sie Hilfe bei der Optimierung Ihres Profils?"
+        ],
+        "en": [
+          "Would you like to try the AI cover letter function?",
+          "Do you have questions about the quality of generated texts?",
+          "Do you need help optimizing your profile?"
+        ]
+      }
+    },
+    {
+      "intent": "credits_pricing",
+      "keywords": {
+        "de": ["credits", "preise", "kosten", "bezahlung", "credit system", "gebühren", "kaufen"],
+        "en": ["credits", "pricing", "costs", "payment", "credit system", "fees", "buy"]
+      },
+      "responses": {
+        "de": [
+          "Easy-Job.ai Credit-System:\n\n💰 Wie Credits funktionieren:\n• Ein Credit = Ein KI-generiertes Anschreiben\n• Transparente Preisgestaltung\n• Keine versteckten Gebühren\n• Flexible Credit-Pakete verfügbar\n• Credits verfallen nicht\n\n🛒 Credit-Kauf:\n• Verschiedene Paketgrößen\n• Sichere Zahlungsabwicklung\n• Sofortige Verfügbarkeit\n• Rechnung per E-Mail",
+          "Preisübersicht und Kostentransparenz:\n\n✅ Inklusive Services:\n• KI-Anschreiben-Generierung\n• Lebenslauf-Analyse kostenlos\n• Job-Matching ohne Aufpreis\n• Unbegrenzte Bewerbungs-Verwaltung\n• Support ohne zusätzliche Kosten\n\n❌ Keine versteckten Gebühren:\n• Keine Abo-Fallen\n• Keine Setup-Kosten\n• Keine monatlichen Grundgebühren\n• Transparente Einzelpreise",
+          "Credit-Management:\n\n🔄 Bei Konto-Löschung:\n• Credits verfallen bei Löschung\n• Vorherige Nutzung empfohlen\n• Datenexport vor Löschung möglich\n\n📊 Credit-Übersicht:\n• Dashboard zeigt aktuellen Stand\n• Verbrauchshistorie einsehbar\n• Automatische Benachrichtigung bei niedrigem Stand\n• Einfache Nachkauf-Option"
+        ],
+        "en": [
+          "Easy-Job.ai Credit System:\n\n💰 How Credits Work:\n• One credit = One AI-generated cover letter\n• Transparent pricing\n• No hidden fees\n• Flexible credit packages available\n• Credits don't expire\n\n🛒 Credit Purchase:\n• Various package sizes\n• Secure payment processing\n• Immediate availability\n• Invoice via email",
+          "Pricing Overview and Cost Transparency:\n\n✅ Included Services:\n• AI cover letter generation\n• Resume analysis for free\n• Job matching at no extra cost\n• Unlimited application management\n• Support at no additional cost\n\n❌ No Hidden Fees:\n• No subscription traps\n• No setup costs\n• No monthly base fees\n• Transparent individual prices",
+          "Credit Management:\n\n🔄 Account Deletion:\n• Credits expire upon deletion\n• Prior usage recommended\n• Data export possible before deletion\n\n📊 Credit Overview:\n• Dashboard shows current balance\n• Usage history viewable\n• Automatic notification for low balance\n• Easy repurchase option"
+        ]
+      },
+      "followUp": {
+        "de": [
+          "Möchten Sie Informationen zu aktuellen Preispaketen?",
+          "Haben Sie Fragen zum Credit-Verbrauch?",
+          "Brauchen Sie Hilfe beim Credit-Kauf?"
+        ],
+        "en": [
+          "Would you like information about current pricing packages?",
+          "Do you have questions about credit consumption?",
+          "Do you need help purchasing credits?"
+        ]
+      }
+    },
+    {
+      "intent": "technical_support",
+      "keywords": {
+        "de": ["technisch", "problem", "fehler", "funktioniert nicht", "support", "hilfe", "smartphone", "dateiformate"],
+        "en": ["technical", "problem", "error", "not working", "support", "help", "smartphone", "file formats"]
+      },
+      "responses": {
+        "de": [
+          "Technischer Support bei Easy-Job.ai:\n\n📱 Plattform-Kompatibilität:\n• Funktioniert auf allen Smartphones\n• Responsive Web-Design\n• Alle gängigen Browser unterstützt\n• iOS und Android optimiert\n• Offline-Funktionen verfügbar\n\n📄 Unterstützte Dateiformate:\n• PDF (empfohlen)\n• DOC/DOCX\n• Mehrere Lebensläufe hochladbar\n• Automatische Format-Konvertierung",
+          "Mehrsprachiger Support:\n\n🌍 Verfügbare Sprachen:\n• Deutsch (Hauptsprache)\n• Englisch\n• Weitere Sprachen in Entwicklung\n• Interface in beiden Sprachen\n• KI-Anschreiben mehrsprachig\n\n🔧 Bei technischen Problemen:\n• FAQ zuerst konsultieren\n• E-Mail an team@easy-job.ai\n• Schnelle Antwortzeiten\n• Persönlicher Support",
+          "Datenmanagement und Export:\n\n💾 Datenexport:\n• Alle Daten exportierbar\n• PDF und Excel-Format\n• Bewerbungshistorie inklusive\n• DSGVO-konforme Datenbereitstellung\n\n🗑️ Konto löschen:\n• Vollständige Datenlöschung möglich\n• Bestätigung erforderlich\n• Unwiderruflicher Prozess\n• Export vor Löschung empfohlen"
+        ],
+        "en": [
+          "Technical Support at Easy-Job.ai:\n\n📱 Platform Compatibility:\n• Works on all smartphones\n• Responsive web design\n• All common browsers supported\n• iOS and Android optimized\n• Offline functions available\n\n📄 Supported File Formats:\n• PDF (recommended)\n• DOC/DOCX\n• Multiple resumes uploadable\n• Automatic format conversion",
+          "Multilingual Support:\n\n🌍 Available Languages:\n• German (main language)\n• English\n• More languages in development\n• Interface in both languages\n• AI cover letters multilingual\n\n🔧 For Technical Problems:\n• Consult FAQ first\n• Email to team@easy-job.ai\n• Fast response times\n• Personal support",
+          "Data Management and Export:\n\n💾 Data Export:\n• All data exportable\n• PDF and Excel format\n• Application history included\n• GDPR-compliant data provision\n\n🗑️ Delete Account:\n• Complete data deletion possible\n• Confirmation required\n• Irreversible process\n• Export recommended before deletion"
+        ]
+      },
+      "followUp": {
+        "de": [
+          "Haben Sie ein spezifisches technisches Problem?",
+          "Benötigen Sie Hilfe beim Datenexport?",
+          "Möchten Sie Kontakt zum Support-Team aufnehmen?"
+        ],
+        "en": [
+          "Do you have a specific technical problem?",
+          "Do you need help with data export?",
+          "Would you like to contact the support team?"
+        ]
+      }
+    },
+    {
+      "intent": "data_privacy",
+      "keywords": {
+        "de": ["datenschutz", "dsgvo", "privat", "sicherheit", "daten", "speicherung", "vertraulich"],
+        "en": ["data protection", "gdpr", "privacy", "security", "data", "storage", "confidential"]
+      },
+      "responses": {
+        "de": [
+          "Datenschutz bei Easy-Job.ai:\n\n🔒 DSGVO-Compliance:\n• Vollständige DSGVO-Konformität\n• Deutsche Datenschutzstandards\n• Verschlüsselte Datenübertragung\n• Sichere Server in Deutschland\n• Transparente Datenschutzerklärung\n\n🛡️ Schutz Ihrer Bewerbungen:\n• Bewerbungen sind komplett privat\n• Keine Sichtbarkeit für andere Nutzer\n• Kein Verkauf an Dritte\n• Strenge Zugriffskontrollen",
+          "Datenspeicherung und -verwaltung:\n\n📊 Was wird gespeichert:\n• Lebensläufe und Anschreiben\n• Bewerbungshistorie\n• Präferenzen und Einstellungen\n• Anonymisierte Nutzungsstatistiken\n\n⏰ Speicherdauer:\n• Daten nur solange notwendig\n• Löschung auf Anfrage möglich\n• Automatische Bereinigung inaktiver Konten\n• Export vor Löschung verfügbar",
+          "Ihre Rechte als Nutzer:\n\n✅ DSGVO-Rechte:\n• Recht auf Auskunft\n• Recht auf Berichtigung\n• Recht auf Löschung\n• Recht auf Datenübertragbarkeit\n• Widerspruchsrecht\n\n🚫 Verbotene Aktivitäten:\n• Missbrauch der Plattform\n• Spam oder Belästigung\n• Falsche Angaben\n• Urheberrechtsverletzungen\n• Kommerzielle Weiterverwendung ohne Erlaubnis"
+        ],
+        "en": [
+          "Data Protection at Easy-Job.ai:\n\n🔒 GDPR Compliance:\n• Full GDPR conformity\n• German data protection standards\n• Encrypted data transmission\n• Secure servers in Germany\n• Transparent privacy policy\n\n🛡️ Protection of Your Applications:\n• Applications are completely private\n• No visibility for other users\n• No sale to third parties\n• Strict access controls",
+          "Data Storage and Management:\n\n📊 What is Stored:\n• Resumes and cover letters\n• Application history\n• Preferences and settings\n• Anonymized usage statistics\n\n⏰ Storage Duration:\n• Data only as long as necessary\n• Deletion on request possible\n• Automatic cleanup of inactive accounts\n• Export available before deletion",
+          "Your Rights as a User:\n\n✅ GDPR Rights:\n• Right to information\n• Right to correction\n• Right to deletion\n• Right to data portability\n• Right to object\n\n🚫 Prohibited Activities:\n• Platform abuse\n• Spam or harassment\n• False information\n• Copyright violations\n• Commercial reuse without permission"
+        ]
+      },
+      "followUp": {
+        "de": [
+          "Haben Sie Fragen zu Ihren Datenschutzrechten?",
+          "Möchten Sie Ihre Daten exportieren?",
+          "Brauchen Sie Informationen zur Datenlöschung?"
+        ],
+        "en": [
+          "Do you have questions about your data protection rights?",
+          "Would you like to export your data?",
+          "Do you need information about data deletion?"
         ]
       }
     }
