@@ -3,9 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Easy-Job Multilingual Career Assistant</title>
+    <title>EasyJobAI Multilingual Career Assistant</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js"></script>
     <style>
+        :root {
+            /* Dark Mode Variables (Default) */
+            --bg-gradient: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            --chat-bg: #1a1a2e;
+            --header-gradient: linear-gradient(45deg, #16213e, #0f3460);
+            --message-bg: #16213e;
+            --user-message-gradient: linear-gradient(45deg, #4a6cf7, #667eea);
+            --bot-message-bg: #2a2a4a;
+            --bot-message-border: #3a3a6a;
+            --input-bg: #2a2a4a;
+            --input-border: #3a3a6a;
+            --input-border-focus: #667eea;
+            --text-primary: #ffffff;
+            --text-secondary: #b8b8d1;
+            --text-placeholder: #8a8aa0;
+            --button-primary: linear-gradient(45deg, #667eea, #764ba2);
+            --button-danger: linear-gradient(45deg, #ff6b6b, #ee5a52);
+            --quick-action-bg: rgba(102, 126, 234, 0.1);
+            --quick-action-border: rgba(102, 126, 234, 0.3);
+            --quick-action-color: #667eea;
+            --shadow-color: rgba(0, 0, 0, 0.3);
+            --status-online: #4CAF50;
+            --status-offline: #ff6b6b;
+        }
+
+        [data-theme="light"] {
+            /* Light Mode Variables */
+            --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --chat-bg: #ffffff;
+            --header-gradient: linear-gradient(45deg, #4CAF50, #2196F3);
+            --message-bg: #f8f9fa;
+            --user-message-gradient: linear-gradient(45deg, #2196F3, #21CBF3);
+            --bot-message-bg: #ffffff;
+            --bot-message-border: #e0e0e0;
+            --input-bg: #ffffff;
+            --input-border: #e0e0e0;
+            --input-border-focus: #4CAF50;
+            --text-primary: #333333;
+            --text-secondary: #666666;
+            --text-placeholder: #999999;
+            --button-primary: linear-gradient(45deg, #4CAF50, #45a049);
+            --button-danger: linear-gradient(45deg, #f44336, #d32f2f);
+            --quick-action-bg: rgba(76, 175, 80, 0.1);
+            --quick-action-border: rgba(76, 175, 80, 0.3);
+            --quick-action-color: #4CAF50;
+            --shadow-color: rgba(0, 0, 0, 0.3);
+            --status-online: #4CAF50;
+            --status-offline: #f44336;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -14,31 +64,34 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: var(--bg-gradient);
             height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
+            transition: background 0.3s ease;
         }
 
         .chat-container {
             width: 90%;
             max-width: 800px;
             height: 90vh;
-            background: white;
+            background: var(--chat-bg);
             border-radius: 20px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 20px 50px var(--shadow-color);
             display: flex;
             flex-direction: column;
             overflow: hidden;
+            transition: background 0.3s ease, box-shadow 0.3s ease;
         }
 
         .chat-header {
-            background: linear-gradient(45deg, #4CAF50, #2196F3);
-            color: white;
+            background: var(--header-gradient);
+            color: var(--text-primary);
             padding: 20px;
             text-align: center;
             position: relative;
+            transition: background 0.3s ease;
         }
 
         .chat-header h1 {
@@ -52,10 +105,37 @@
             opacity: 0.9;
         }
 
-        .language-selector {
+        .header-controls {
             position: absolute;
             top: 15px;
             right: 20px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .theme-toggle {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 8px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .theme-toggle:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-1px);
+        }
+
+        .language-selector {
             display: flex;
             gap: 10px;
         }
@@ -95,7 +175,7 @@
             width: 8px;
             height: 8px;
             border-radius: 50%;
-            background: #4CAF50;
+            background: var(--status-online);
             animation: pulse 2s infinite;
         }
 
@@ -109,7 +189,8 @@
             flex: 1;
             padding: 20px;
             overflow-y: auto;
-            background: #f8f9fa;
+            background: var(--message-bg);
+            transition: background 0.3s ease;
         }
 
         .message {
@@ -144,18 +225,19 @@
             position: relative;
             word-wrap: break-word;
             line-height: 1.4;
+            transition: background 0.3s ease, border-color 0.3s ease;
         }
 
         .message.user .message-content {
-            background: linear-gradient(45deg, #2196F3, #21CBF3);
+            background: var(--user-message-gradient);
             color: white;
             border-bottom-right-radius: 5px;
         }
 
         .message.bot .message-content {
-            background: white;
-            color: #333;
-            border: 1px solid #e0e0e0;
+            background: var(--bot-message-bg);
+            color: var(--text-primary);
+            border: 1px solid var(--bot-message-border);
             border-bottom-left-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
@@ -173,29 +255,36 @@
 
         .chat-input-container {
             padding: 20px;
-            background: white;
-            border-top: 1px solid #e0e0e0;
+            background: var(--input-bg);
+            border-top: 1px solid var(--input-border);
             display: flex;
             gap: 12px;
             align-items: center;
+            transition: background 0.3s ease, border-color 0.3s ease;
         }
 
         .chat-input {
             flex: 1;
             padding: 12px 16px;
-            border: 2px solid #e0e0e0;
+            border: 2px solid var(--input-border);
             border-radius: 25px;
             font-size: 14px;
             outline: none;
-            transition: border-color 0.3s ease;
+            transition: border-color 0.3s ease, background 0.3s ease, color 0.3s ease;
+            background: var(--input-bg);
+            color: var(--text-primary);
+        }
+
+        .chat-input::placeholder {
+            color: var(--text-placeholder);
         }
 
         .chat-input:focus {
-            border-color: #4CAF50;
+            border-color: var(--input-border-focus);
         }
 
         .send-btn {
-            background: linear-gradient(45deg, #4CAF50, #45a049);
+            background: var(--button-primary);
             border: none;
             color: white;
             padding: 12px 20px;
@@ -219,7 +308,7 @@
         }
 
         .clear-btn {
-            background: linear-gradient(45deg, #f44336, #d32f2f);
+            background: var(--button-danger);
             border: none;
             color: white;
             padding: 8px 12px;
@@ -239,7 +328,7 @@
             align-items: center;
             gap: 8px;
             padding: 8px 16px;
-            color: #666;
+            color: var(--text-secondary);
             font-size: 12px;
             font-style: italic;
         }
@@ -253,7 +342,7 @@
             width: 4px;
             height: 4px;
             border-radius: 50%;
-            background: #999;
+            background: var(--text-secondary);
             animation: typingPulse 1.5s infinite;
         }
 
@@ -282,9 +371,9 @@
         }
 
         .quick-action-btn {
-            background: rgba(76, 175, 80, 0.1);
-            border: 1px solid rgba(76, 175, 80, 0.3);
-            color: #4CAF50;
+            background: var(--quick-action-bg);
+            border: 1px solid var(--quick-action-border);
+            color: var(--quick-action-color);
             padding: 6px 12px;
             border-radius: 15px;
             cursor: pointer;
@@ -293,7 +382,7 @@
         }
 
         .quick-action-btn:hover {
-            background: rgba(76, 175, 80, 0.2);
+            background: var(--quick-action-border);
             transform: translateY(-1px);
         }
 
@@ -314,7 +403,7 @@
                 font-size: 20px;
             }
 
-            .language-selector {
+            .header-controls {
                 position: static;
                 margin-top: 10px;
                 justify-content: center;
@@ -332,18 +421,23 @@
         }
     </style>
 </head>
-<body>
+<body data-theme="dark">
     <div class="chat-container">
         <div class="chat-header">
             <div class="status-indicator">
                 <div class="status-dot"></div>
                 <span id="status-text">Online</span>
             </div>
-            <div class="language-selector">
-                <button class="lang-btn active" data-lang="de">🇩🇪 DE</button>
-                <button class="lang-btn" data-lang="en">🇺🇸 EN</button>
+            <div class="header-controls">
+                <button class="theme-toggle" id="theme-toggle" title="Theme wechseln">
+                    🌙
+                </button>
+                <div class="language-selector">
+                    <button class="lang-btn active" data-lang="de">🇩🇪 DE</button>
+                    <button class="lang-btn" data-lang="en">🇺🇸 EN</button>
+                </div>
             </div>
-            <h1 id="chat-title">Easy-Job Karriere-Assistent</h1>
+            <h1 id="chat-title">EasyJobAI Karriere-Assistent</h1>
             <p id="chat-subtitle">Ihr intelligenter Begleiter für Bewerbungen und Karriereplanung</p>
         </div>
 
@@ -380,10 +474,12 @@
             constructor() {
                 this.socket = io();
                 this.currentLanguage = 'de';
+                this.currentTheme = 'dark'; // Default to dark mode
                 this.isConnected = false;
                 this.isTyping = false;
                 
                 this.initializeElements();
+                this.initializeTheme();
                 this.setupSocketListeners();
                 this.setupEventListeners();
                 this.setupQuickActions();
@@ -400,6 +496,30 @@
                 this.chatSubtitle = document.getElementById('chat-subtitle');
                 this.typingText = document.getElementById('typing-text');
                 this.quickActions = document.getElementById('quick-actions');
+                this.themeToggle = document.getElementById('theme-toggle');
+            }
+
+            initializeTheme() {
+                // Load theme from localStorage or default to dark
+                const savedTheme = localStorage.getItem('chatbot-theme') || 'dark';
+                this.setTheme(savedTheme);
+            }
+
+            setTheme(theme) {
+                this.currentTheme = theme;
+                document.body.setAttribute('data-theme', theme);
+                localStorage.setItem('chatbot-theme', theme);
+                
+                // Update theme toggle icon
+                this.themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+                this.themeToggle.title = theme === 'dark' ? 
+                    (this.currentLanguage === 'de' ? 'Hell-Modus aktivieren' : 'Activate light mode') :
+                    (this.currentLanguage === 'de' ? 'Dunkel-Modus aktivieren' : 'Activate dark mode');
+            }
+
+            toggleTheme() {
+                const newTheme = this.currentTheme === 'dark' ? 'light' : 'dark';
+                this.setTheme(newTheme);
             }
 
             setupSocketListeners() {
@@ -451,6 +571,9 @@
 
                 // Clear chat
                 this.clearBtn.addEventListener('click', () => this.clearChat());
+
+                // Theme toggle
+                this.themeToggle.addEventListener('click', () => this.toggleTheme());
 
                 // Language switching
                 document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -529,22 +652,26 @@
                 // Update UI text
                 const uiText = {
                     'de': {
-                        title: 'Easy-Job Karriere-Assistent',
+                        title: 'EasyJobAI Karriere-Assistent',
                         subtitle: 'Ihr intelligenter Begleiter für Bewerbungen und Karriereplanung',
                         placeholder: 'Schreiben Sie Ihre Nachricht...',
                         sendBtn: 'Senden',
                         typing: 'Bot schreibt',
                         online: 'Online',
-                        offline: 'Offline'
+                        offline: 'Offline',
+                        themeToggleDark: 'Hell-Modus aktivieren',
+                        themeToggleLight: 'Dunkel-Modus aktivieren'
                     },
                     'en': {
-                        title: 'Easy-Job Career Assistant',
+                        title: 'EasyJobAI Career Assistant',
                         subtitle: 'Your intelligent companion for applications and career planning',
                         placeholder: 'Type your message...',
                         sendBtn: 'Send',
                         typing: 'Bot is typing',
                         online: 'Online',
-                        offline: 'Offline'
+                        offline: 'Offline',
+                        themeToggleDark: 'Activate light mode',
+                        themeToggleLight: 'Activate dark mode'
                     }
                 };
 
@@ -554,6 +681,10 @@
                 this.chatInput.placeholder = text.placeholder;
                 this.sendBtn.textContent = text.sendBtn;
                 this.typingText.textContent = text.typing;
+                
+                // Update theme toggle title
+                this.themeToggle.title = this.currentTheme === 'dark' ? 
+                    text.themeToggleDark : text.themeToggleLight;
                 
                 if (this.isConnected) {
                     this.statusText.textContent = text.online;
@@ -618,10 +749,10 @@
                 };
 
                 if (status === 'online') {
-                    statusDot.style.background = '#4CAF50';
+                    statusDot.style.background = 'var(--status-online)';
                     this.statusText.textContent = text[this.currentLanguage].online;
                 } else {
-                    statusDot.style.background = '#f44336';
+                    statusDot.style.background = 'var(--status-offline)';
                     this.statusText.textContent = text[this.currentLanguage].offline;
                 }
             }

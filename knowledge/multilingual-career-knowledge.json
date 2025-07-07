@@ -8,14 +8,14 @@
       },
       "responses": {
         "de": [
-          "Hallo! Schön, dass Sie da sind. Ich helfe Ihnen gerne bei allen Fragen rund um Bewerbung und Karriere.",
-          "Hi! Wie kann ich Ihnen heute bei Ihrer beruflichen Entwicklung helfen?",
-          "Guten Tag! Ich bin Ihr Easy-Job Assistant für Karrierefragen. Was beschäftigt Sie?"
+          "Hallo! Schön, dass Sie da sind. Ich bin der EasyJobAI Karriere Assistent und helfe Ihnen gerne bei allen Fragen rund um Bewerbung und Karriere.",
+          "Hi! Ich bin der EasyJobAI Karriere Assistent. Wie kann ich Ihnen heute bei Ihrer beruflichen Entwicklung helfen?",
+          "Guten Tag! Ich bin der EasyJobAI Karriere Assistent für alle Ihre Karrierefragen. Was beschäftigt Sie?"
         ],
         "en": [
-          "Hello! Nice to meet you. I'm happy to help with all questions about applications and career development.",
-          "Hi! How can I assist you with your professional development today?",
-          "Good day! I'm your Easy-Job Assistant for career questions. What can I help you with?"
+          "Hello! Nice to meet you. I'm the EasyJobAI Career Assistant and I'm happy to help with all questions about applications and career development.",
+          "Hi! I'm the EasyJobAI Career Assistant. How can I assist you with your professional development today?",
+          "Good day! I'm the EasyJobAI Career Assistant for all your career questions. What can I help you with?"
         ]
       },
       "followUp": {

@@ -10,7 +10,7 @@ const multilingualFallbackResponses = require('./knowledge/multilingual-fallback
 
 class MultilingualCareerChatBot {
     constructor() {
-        this.name = 'easy-job.ai Career Assistant';
+        this.name = 'EasyJobAI Career Assistant';
         this.conversationHistory = new Map(); // Store conversation per socket
         this.fallbackCount = new Map(); // Track failed attempts per socket
         this.userLanguage = new Map(); // Track user's preferred language per socket
@@ -96,7 +96,7 @@ class MultilingualCareerChatBot {
 
     // Find appropriate response based on multilingual keyword matching
     findResponse(socketId, userMessage) {
-        console.log(`\\n=== MULTILINGUAL DEBUG findResponse ===`);
+        console.log(`\n=== MULTILINGUAL DEBUG findResponse ===`);
         console.log(`User Message: "${userMessage}"`);
         console.log(`Current Language: ${this.userLanguage.get(socketId)}`);
         
@@ -132,18 +132,18 @@ class MultilingualCareerChatBot {
             if (bestMatch.followUp && bestMatch.followUp[currentLang]) {
                 const followUps = bestMatch.followUp[currentLang];
                 const followUp = followUps[Math.floor(Math.random() * followUps.length)];
-                const finalResponse = `${randomResponse}\\n\\n${followUp}`;
+                const finalResponse = `${randomResponse}\n\n${followUp}`;
                 console.log(`Final response: "${finalResponse}"`);
-                console.log(`=== END MULTILINGUAL DEBUG ===\\n`);
+                console.log(`=== END MULTILINGUAL DEBUG ===\n`);
                 return finalResponse;
             }
             
             console.log(`Response: "${randomResponse}"`);
-            console.log(`=== END MULTILINGUAL DEBUG ===\\n`);
+            console.log(`=== END MULTILINGUAL DEBUG ===\n`);
             return randomResponse;
         } else {
             console.log(`✗ No match found, using fallback`);
-            console.log(`=== END MULTILINGUAL DEBUG ===\\n`);
+            console.log(`=== END MULTILINGUAL DEBUG ===\n`);
             return this.handleMultilingualFallback(socketId, userMessage);
         }
     }
@@ -152,7 +152,7 @@ class MultilingualCareerChatBot {
     calculateMultilingualMatchScore(userMessage, keywordsByLanguage, currentLang) {
         console.log(`  → Calculating multilingual score for: "${userMessage}"`);
         
-        const messageWords = userMessage.split(/\\s+/);
+        const messageWords = userMessage.split(/\s+/);
         let totalWeight = 0;
         let matches = [];
 
@@ -239,14 +239,14 @@ class MultilingualCareerChatBot {
         
         const greetings = {
             'de': [
-                "Hallo! Ich bin der Easy-Job Assistant. Wie kann ich Ihnen bei Ihrer Karriere helfen?",
-                "Willkommen! Ich helfe Ihnen gerne bei Fragen rund um Bewerbungen und Karriere.",
-                "Hi! Ich bin hier, um Sie bei Ihrer Jobsuche und Karriereplanung zu unterstützen. Was beschäftigt Sie?"
+                "Hallo! Ich bin der EasyJobAI Karriere Assistent. Wie kann ich Ihnen bei Ihrer Karriere helfen?",
+                "Willkommen! Ich bin der EasyJobAI Karriere Assistent und helfe Ihnen gerne bei Fragen rund um Bewerbungen und Karriere.",
+                "Hi! Ich bin der EasyJobAI Karriere Assistent und hier, um Sie bei Ihrer Jobsuche und Karriereplanung zu unterstützen. Was beschäftigt Sie?"
             ],
             'en': [
-                "Hello! I'm the Easy-Job Assistant. How can I help you with your career?",
-                "Welcome! I'm happy to help you with questions about applications and career development.",
-                "Hi! I'm here to support you with your job search and career planning. What's on your mind?"
+                "Hello! I'm the EasyJobAI Career Assistant. How can I help you with your career?",
+                "Welcome! I'm the EasyJobAI Career Assistant and I'm happy to help you with questions about applications and career development.",
+                "Hi! I'm the EasyJobAI Career Assistant and I'm here to support you with your job search and career planning. What's on your mind?"
             ]
         };
         
@@ -501,7 +501,7 @@ const PORT = process.env.PORT || 3000;
 const HOST = process.env.HOST || 'localhost';
 
 server.listen(PORT, HOST, () => {
-    console.log(`\n🤖 Easy-Job Multilingual Chatbot Server running on http://${HOST}:${PORT}`);
+    console.log(`\n🤖 EasyJobAI Multilingual Chatbot Server running on http://${HOST}:${PORT}`);
     console.log(`📊 Health check available at http://${HOST}:${PORT}/api/health`);
     console.log(`💬 Bot Name: ${chatBot.name}`);
     console.log(`🌐 Supported Languages: ${chatBot.supportedLanguages.join(', ')}`);

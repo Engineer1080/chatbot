@@ -17,16 +17,16 @@
   },
   "hardFallback": {
     "de": [
-      "Es scheint, als hätten wir aneinander vorbeigeredet. Lassen Sie uns von vorne beginnen! Ich bin der Easy-Job Assistant und helfe bei Karrierefragen. Womit kann ich Ihnen helfen?",
-      "Beginnen wir neu! Ich unterstütze Sie bei allem rund um Bewerbungen, Jobsuche und Karriereentwicklung. Was ist Ihr wichtigstes Anliegen?",
-      "Lassen Sie uns einen Neustart machen. Hier sind einige Themen, bei denen ich Ihnen helfen kann:\n• Bewerbung schreiben\n• Lebenslauf optimieren\n• Vorstellungsgespräch vorbereiten\n• Gehalt verhandeln\n• Karriere planen\n\nWas interessiert Sie am meisten?",
-      "Starten wir von vorne! Als Ihr Karriere-Assistant kann ich Ihnen bei folgenden Themen helfen:\n• Jobsuche und Bewerbungsstrategie\n• CV und Anschreiben\n• Interview-Vorbereitung\n• Gehaltsverhandlung\n• Berufliche Weiterentwicklung\n\nWorüber möchten Sie sprechen?"
+      "Es scheint, als hätten wir aneinander vorbeigeredet. Lassen Sie uns von vorne beginnen! Ich bin der EasyJobAI Karriere Assistent und helfe bei Karrierefragen. Womit kann ich Ihnen helfen?",
+      "Beginnen wir neu! Ich bin der EasyJobAI Karriere Assistent und unterstütze Sie bei allem rund um Bewerbungen, Jobsuche und Karriereentwicklung. Was ist Ihr wichtigstes Anliegen?",
+      "Lassen Sie uns einen Neustart machen. Ich bin der EasyJobAI Karriere Assistent. Hier sind einige Themen, bei denen ich Ihnen helfen kann:\n• Bewerbung schreiben\n• Lebenslauf optimieren\n• Vorstellungsgespräch vorbereiten\n• Gehalt verhandeln\n• Karriere planen\n\nWas interessiert Sie am meisten?",
+      "Starten wir von vorne! Ich bin der EasyJobAI Karriere Assistent und kann Ihnen bei folgenden Themen helfen:\n• Jobsuche und Bewerbungsstrategie\n• CV und Anschreiben\n• Interview-Vorbereitung\n• Gehaltsverhandlung\n• Berufliche Weiterentwicklung\n\nWorüber möchten Sie sprechen?"
     ],
     "en": [
-      "It seems we've been talking past each other. Let's start over! I'm the Easy-Job Assistant and help with career questions. How can I help you?",
-      "Let's start fresh! I support you with everything related to applications, job search, and career development. What's your main concern?",
-      "Let's make a fresh start. Here are some topics I can help you with:\n• Writing applications\n• Optimizing resumes\n• Preparing for job interviews\n• Salary negotiation\n• Career planning\n\nWhat interests you most?",
-      "Let's start from the beginning! As your career assistant, I can help you with the following topics:\n• Job search and application strategy\n• CV and cover letters\n• Interview preparation\n• Salary negotiation\n• Professional development\n\nWhat would you like to talk about?"
+      "It seems we've been talking past each other. Let's start over! I'm the EasyJobAI Career Assistant and help with career questions. How can I help you?",
+      "Let's start fresh! I'm the EasyJobAI Career Assistant and I support you with everything related to applications, job search, and career development. What's your main concern?",
+      "Let's make a fresh start. I'm the EasyJobAI Career Assistant. Here are some topics I can help you with:\n• Writing applications\n• Optimizing resumes\n• Preparing for job interviews\n• Salary negotiation\n• Career planning\n\nWhat interests you most?",
+      "Let's start from the beginning! I'm the EasyJobAI Career Assistant and I can help you with the following topics:\n• Job search and application strategy\n• CV and cover letters\n• Interview preparation\n• Salary negotiation\n• Professional development\n\nWhat would you like to talk about?"
     ]
   }
 }
