@@ -34,8 +34,8 @@
     {
       "intent": "job_search",
       "keywords": {
-        "de": ["job", "jobs", "stelle", "stellen", "arbeitsplatz", "jobsuche", "suche", "suchen", "aktuell", "arbeit", "position", "stellensuche"],
-        "en": ["job", "jobs", "position", "work", "employment", "job search", "looking for", "search", "current", "opportunities", "job hunting"]
+        "de": ["jobsuche", "stellensuche", "job finden", "stelle finden", "arbeitsplatz finden", "job portal", "stellenanzeigen", "jobmarkt", "stellenmarkt"],
+        "en": ["job search", "job hunting", "find job", "job portal", "job board", "job market", "career opportunities", "employment search"]
       },
       "responses": {
         "de": [
@@ -65,8 +65,8 @@
     {
       "intent": "application_writing",
       "keywords": {
-        "de": ["bewerbung", "bewerbungsschreiben", "anschreiben", "motivationsschreiben", "bewerbungsunterlagen", "bewerben", "bewerbungsmappe"],
-        "en": ["application", "cover letter", "application letter", "motivation letter", "applying", "apply", "application package"]
+        "de": ["anschreiben", "bewerbungsschreiben", "motivationsschreiben", "bewerbungstext", "anschreiben verfassen", "bewerbung schreiben", "cover letter"],
+        "en": ["cover letter", "application letter", "motivation letter", "write application", "application writing", "cover letter writing"]
       },
       "responses": {
         "de": [
@@ -96,8 +96,8 @@
     {
       "intent": "resume_cv",
       "keywords": {
-        "de": ["lebenslauf", "cv", "curriculum vitae", "tabellarisch", "berufserfahrung", "lebenslauf schreiben"],
-        "en": ["resume", "cv", "curriculum vitae", "work experience", "professional experience", "resume writing"]
+        "de": ["lebenslauf", "cv", "curriculum vitae", "tabellarischer lebenslauf", "berufserfahrung darstellen", "lebenslauf optimieren", "cv erstellen"],
+        "en": ["resume", "cv", "curriculum vitae", "resume writing", "cv writing", "professional experience", "resume optimization"]
       },
       "responses": {
         "de": [
@@ -127,8 +127,8 @@
     {
       "intent": "interview",
       "keywords": {
-        "de": ["vorstellungsgespräch", "interview", "gespräch", "vorbereitung", "fragen", "bewerbungsgespräch"],
-        "en": ["job interview", "interview", "preparation", "questions", "meeting", "interview prep"]
+        "de": ["vorstellungsgespräch", "job interview", "bewerbungsgespräch", "interview vorbereitung", "gespräch vorbereitung", "interview fragen", "star methode"],
+        "en": ["job interview", "interview preparation", "interview questions", "interview prep", "star method", "behavioral interview"]
       },
       "responses": {
         "de": [
@@ -158,8 +158,8 @@
     {
       "intent": "salary",
       "keywords": {
-        "de": ["gehalt", "lohn", "gehaltsverhandlung", "gehaltsvorstellung", "verdienst", "bezahlung", "vergütung"],
-        "en": ["salary", "wage", "salary negotiation", "salary expectations", "compensation", "pay", "remuneration"]
+        "de": ["gehalt", "lohn", "gehaltsverhandlung", "gehaltsvorstellung", "verdienst", "bezahlung", "vergütung", "lohnverhandlung"],
+        "en": ["salary", "wage", "salary negotiation", "salary expectations", "compensation", "pay", "remuneration", "salary discussion"]
       },
       "responses": {
         "de": [
@@ -189,8 +189,8 @@
     {
       "intent": "career_planning",
       "keywords": {
-        "de": ["karriere", "karriereplanung", "weiterentwicklung", "aufstieg", "ziele", "laufbahn", "berufliche entwicklung"],
-        "en": ["career", "career planning", "development", "advancement", "goals", "growth", "professional development"]
+        "de": ["karriereplanung", "karriereziele", "berufsziele", "laufbahnplanung", "karriereweg", "aufstiegschancen", "berufliche ziele"],
+        "en": ["career planning", "career goals", "career path", "career advancement", "professional goals", "career strategy", "career roadmap"]
       },
       "responses": {
         "de": [
@@ -218,10 +218,10 @@
       }
     },
     {
-      "intent": "networking",
+      "intent": "professional_networking",
       "keywords": {
-        "de": ["netzwerk", "networking", "kontakte", "beziehungen", "vitamin b", "networking events"],
-        "en": ["networking", "network", "contacts", "connections", "relationships", "networking events"]
+        "de": ["netzwerken", "networking events", "kontakte knüpfen", "beziehungen aufbauen", "vitamin b", "business networking", "berufliche kontakte"],
+        "en": ["networking", "professional networking", "networking events", "build connections", "business relationships", "professional contacts"]
       },
       "responses": {
         "de": [
@@ -249,10 +249,10 @@
       }
     },
     {
-      "intent": "linkedin_profile",
+      "intent": "linkedin_optimization",
       "keywords": {
-        "de": ["linkedin", "xing", "profil", "online profil", "social media", "berufsnetzwerk"],
-        "en": ["linkedin", "profile", "online profile", "social media", "professional network"]
+        "de": ["linkedin profil", "xing profil", "linkedin optimierung", "online profil", "linkedin headline", "linkedin zusammenfassung", "berufliches profil"],
+        "en": ["linkedin profile", "linkedin optimization", "online profile", "linkedin headline", "linkedin summary", "professional profile"]
       },
       "responses": {
         "de": [
@@ -282,8 +282,8 @@
     {
       "intent": "skills_development",
       "keywords": {
-        "de": ["fähigkeiten", "skills", "kompetenzen", "weiterbildung", "lernen", "fortbildung", "qualifikation"],
-        "en": ["skills", "competencies", "development", "learning", "training", "education", "qualifications"]
+        "de": ["skills entwickeln", "fähigkeiten lernen", "kompetenzen aufbauen", "weiterbildung", "fortbildung", "qualifikation erwerben", "zertifizierung"],
+        "en": ["skills development", "skill building", "learn skills", "training", "education", "certification", "professional development"]
       },
       "responses": {
         "de": [
@@ -313,8 +313,8 @@
     {
       "intent": "remote_work",
       "keywords": {
-        "de": ["remote", "homeoffice", "home office", "fernarbeit", "mobiles arbeiten", "telearbeit"],
-        "en": ["remote work", "home office", "telecommuting", "work from home", "distributed work"]
+        "de": ["remote work", "homeoffice job", "fernarbeit", "mobiles arbeiten", "telearbeit", "remote bewerbung", "home office"],
+        "en": ["remote work", "work from home", "telecommuting", "distributed work", "remote job", "home office"]
       },
       "responses": {
         "de": [
@@ -344,8 +344,8 @@
     {
       "intent": "career_change",
       "keywords": {
-        "de": ["berufswechsel", "quereinstieg", "umorientierung", "branchenwechsel", "neuanfang", "karrierewechsel"],
-        "en": ["career change", "career transition", "career switch", "industry change", "career pivot"]
+        "de": ["berufswechsel", "quereinstieg", "umorientierung", "branchenwechsel", "neuanfang", "karrierewechsel", "beruflich umsteigen"],
+        "en": ["career change", "career transition", "career switch", "industry change", "career pivot", "career shift"]
       },
       "responses": {
         "de": [
@@ -375,8 +375,8 @@
     {
       "intent": "work_life_balance",
       "keywords": {
-        "de": ["work life balance", "vereinbarkeit", "flexible arbeitszeit", "teilzeit", "auszeit"],
-        "en": ["work life balance", "work life", "flexible hours", "part time", "sabbatical"]
+        "de": ["work life balance", "vereinbarkeit", "teilzeit", "auszeit", "4 tage woche", "gleitzeit", "sabbatical"],
+        "en": ["work life balance", "work life", "part time", "sabbatical", "flexible schedule", "4 day week"]
       },
       "responses": {
         "de": [
@@ -404,8 +404,8 @@
     {
       "intent": "language_switch",
       "keywords": {
-        "de": ["englisch", "english", "sprache", "language", "deutsch", "german"],
-        "en": ["german", "deutsch", "language", "sprache", "english", "englisch"]
+        "de": ["englisch", "english", "sprache wechseln", "language", "deutsch", "german"],
+        "en": ["german", "deutsch", "switch language", "sprache", "english", "englisch"]
       },
       "responses": {
         "de": [
@@ -431,8 +431,8 @@
     {
       "intent": "easy_job_platform",
       "keywords": {
-        "de": ["easy-job", "easy job", "plattform", "bewerbungsplattform", "automatisiert", "ki bewerbung", "beta", "easy-job.ai"],
-        "en": ["easy-job", "easy job", "platform", "application platform", "automated", "ai application", "beta", "easy-job.ai"]
+        "de": ["easy-job.ai", "easy job plattform", "bewerbungsplattform", "beta version", "easy job features", "plattform funktionen"],
+        "en": ["easy-job.ai", "easy job platform", "application platform", "beta version", "platform features"]
       },
       "responses": {
         "de": [
@@ -460,10 +460,10 @@
       }
     },
     {
-      "intent": "ki_features",
+      "intent": "ai_cover_letters",
       "keywords": {
-        "de": ["ki anschreiben", "ai anschreiben", "automatisch", "generierung", "künstliche intelligenz", "ki bewerbung"],
-        "en": ["ai cover letter", "automatic", "generation", "artificial intelligence", "ai application"]
+        "de": ["ki anschreiben", "ai anschreiben", "automatisches anschreiben", "ki generierung", "anschreiben generator", "personalisierte anschreiben"],
+        "en": ["ai cover letter", "ai generated", "automatic cover letter", "personalized cover letter", "cover letter generator"]
       },
       "responses": {
         "de": [
@@ -493,8 +493,8 @@
     {
       "intent": "credits_pricing",
       "keywords": {
-        "de": ["credits", "preise", "kosten", "bezahlung", "credit system", "gebühren", "kaufen"],
-        "en": ["credits", "pricing", "costs", "payment", "credit system", "fees", "buy"]
+        "de": ["credits kaufen", "preise", "kosten", "bezahlung", "credit system", "gebühren", "preispakete"],
+        "en": ["buy credits", "pricing", "costs", "payment", "credit system", "fees", "pricing packages"]
       },
       "responses": {
         "de": [
@@ -524,8 +524,8 @@
     {
       "intent": "technical_support",
       "keywords": {
-        "de": ["technisch", "problem", "fehler", "funktioniert nicht", "support", "hilfe", "smartphone", "dateiformate"],
-        "en": ["technical", "problem", "error", "not working", "support", "help", "smartphone", "file formats"]
+        "de": ["technisches problem", "fehler melden", "funktioniert nicht", "bug report", "technische hilfe", "dateiformate", "app probleme"],
+        "en": ["technical problem", "bug report", "not working", "technical help", "file formats", "app issues"]
       },
       "responses": {
         "de": [
@@ -555,8 +555,8 @@
     {
       "intent": "data_privacy",
       "keywords": {
-        "de": ["datenschutz", "dsgvo", "privat", "sicherheit", "daten", "speicherung", "vertraulich"],
-        "en": ["data protection", "gdpr", "privacy", "security", "data", "storage", "confidential"]
+        "de": ["datenschutz", "dsgvo", "privatsphäre", "datensicherheit", "daten löschen", "speicherung", "vertraulichkeit"],
+        "en": ["data protection", "gdpr", "privacy", "data security", "delete data", "storage", "confidential"]
       },
       "responses": {
         "de": [
