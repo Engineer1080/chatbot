@@ -1,0 +1,15 @@
+{
+    "softFallback": [
+      "Das habe ich nicht ganz verstanden. Könnten Sie Ihre Frage anders formulieren? Ich helfe gerne bei Themen wie Bewerbung, Lebenslauf, Vorstellungsgespräche oder Karriereplanung.",
+      "Entschuldigung, ich bin mir nicht sicher, was Sie meinen. Können Sie spezifischer sein? Ich bin spezialisiert auf Karriere- und Bewerbungsthemen.",
+      "Ich konnte Ihre Anfrage nicht eindeutig zuordnen. Versuchen Sie es mit konkreteren Begriffen wie 'Bewerbung schreiben', 'Gehalt verhandeln' oder 'Jobsuche'.",
+      "Das verstehe ich leider nicht. Möchten Sie vielleicht wissen, wie Sie sich bewerben, Ihr Gehalt verhandeln oder Ihre Karriere planen können?",
+      "Könnten Sie das nochmal anders ausdrücken? Ich kann Ihnen bei Bewerbungen, Vorstellungsgesprächen, Karriereplanung und vielen anderen beruflichen Themen helfen."
+    ],
+    "hardFallback": [
+      "Es scheint, als hätten wir aneinander vorbeigeredet. Lassen Sie uns von vorne beginnen! Ich bin der Easy-Job Assistant und helfe bei Karrierefragen. Womit kann ich Ihnen helfen?",
+      "Beginnen wir neu! Ich unterstütze Sie bei allem rund um Bewerbungen, Jobsuche und Karriereentwicklung. Was ist Ihr wichtigstes Anliegen?",
+      "Lassen Sie uns einen Neustart machen. Hier sind einige Themen, bei denen ich Ihnen helfen kann:\n• Bewerbung schreiben\n• Lebenslauf optimieren\n• Vorstellungsgespräch vorbereiten\n• Gehalt verhandeln\n• Karriere planen\n\nWas interessiert Sie am meisten?",
+      "Starten wir von vorne! Als Ihr Karriere-Assistant kann ich Ihnen bei folgenden Themen helfen:\n• Jobsuche und Bewerbungsstrategie\n• CV und Anschreiben\n• Interview-Vorbereitung\n• Gehaltsverhandlung\n• Berufliche Weiterentwicklung\n\nWorüber möchten Sie sprechen?"
+    ]
+  }
