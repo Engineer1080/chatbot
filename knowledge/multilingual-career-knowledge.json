@@ -1,0 +1,248 @@
+{
+  "intents": [
+    {
+      "intent": "greetings",
+      "keywords": {
+        "de": ["hallo", "hi", "guten tag", "moin", "servus", "tag", "hallo!", "hey"],
+        "en": ["hello", "hi", "hey", "good morning", "good afternoon", "greetings", "howdy"]
+      },
+      "responses": {
+        "de": [
+          "Hallo! Schön, dass Sie da sind. Ich helfe Ihnen gerne bei allen Fragen rund um Bewerbung und Karriere.",
+          "Hi! Wie kann ich Ihnen heute bei Ihrer beruflichen Entwicklung helfen?",
+          "Guten Tag! Ich bin Ihr Easy-Job Assistant für Karrierefragen. Was beschäftigt Sie?"
+        ],
+        "en": [
+          "Hello! Nice to meet you. I'm happy to help with all questions about applications and career development.",
+          "Hi! How can I assist you with your professional development today?",
+          "Good day! I'm your Easy-Job Assistant for career questions. What can I help you with?"
+        ]
+      },
+      "followUp": {
+        "de": [
+          "Haben Sie eine konkrete Frage zu Bewerbungen oder Karriere?",
+          "Suchen Sie gerade nach einem neuen Job?",
+          "Womit kann ich Ihnen behilflich sein?"
+        ],
+        "en": [
+          "Do you have a specific question about applications or career?",
+          "Are you currently looking for a new job?",
+          "How can I assist you?"
+        ]
+      }
+    },
+    {
+      "intent": "job_search",
+      "keywords": {
+        "de": ["job", "jobs", "stelle", "stellen", "arbeitsplatz", "jobsuche", "suche", "suchen", "aktuell", "arbeit", "position"],
+        "en": ["job", "jobs", "position", "work", "employment", "job search", "looking for", "search", "current", "opportunities"]
+      },
+      "responses": {
+        "de": [
+          "Bei der Jobsuche kann ich Ihnen gerne helfen! Wichtig ist eine strukturierte Herangehensweise: Definieren Sie Ihre Zielposition, optimieren Sie Ihre Bewerbungsunterlagen und nutzen Sie verschiedene Kanäle wie Jobbörsen, Unternehmenswebsites und Ihr Netzwerk.",
+          "Für eine erfolgreiche Jobsuche empfehle ich: 1) Klare Zieldefinition 2) Optimierte Bewerbungsunterlagen 3) Nutzung verschiedener Suchkanäle 4) Aktives Netzwerken. In welchem Bereich suchen Sie denn?",
+          "Die Jobsuche kann herausfordernd sein, aber mit der richtigen Strategie finden Sie den passenden Job. Beginnen Sie mit einer Analyse Ihrer Stärken und Ziele, dann optimieren Sie Ihren Lebenslauf und Ihr LinkedIn-Profil."
+        ],
+        "en": [
+          "I'd be happy to help you with your job search! A structured approach is important: Define your target position, optimize your application documents, and use various channels like job boards, company websites, and your network.",
+          "For a successful job search, I recommend: 1) Clear goal definition 2) Optimized application documents 3) Using various search channels 4) Active networking. What field are you looking in?",
+          "Job searching can be challenging, but with the right strategy, you'll find the right position. Start with analyzing your strengths and goals, then optimize your resume and LinkedIn profile."
+        ]
+      },
+      "followUp": {
+        "de": [
+          "In welcher Branche oder für welche Position suchen Sie?",
+          "Haben Sie schon Bewerbungsunterlagen vorbereitet?",
+          "Möchten Sie Tipps für bestimmte Jobportale?"
+        ],
+        "en": [
+          "What industry or position are you looking for?",
+          "Have you already prepared your application documents?",
+          "Would you like tips for specific job portals?"
+        ]
+      }
+    },
+    {
+      "intent": "application_writing",
+      "keywords": {
+        "de": ["bewerbung", "bewerbungsschreiben", "anschreiben", "motivationsschreiben", "bewerbungsunterlagen", "bewerben"],
+        "en": ["application", "cover letter", "application letter", "motivation letter", "applying", "apply"]
+      },
+      "responses": {
+        "de": [
+          "Eine gute Bewerbung besteht aus Anschreiben, Lebenslauf und relevanten Zeugnissen. Das Anschreiben sollte individuell auf die Stelle zugeschnitten sein und Ihre Motivation deutlich machen.",
+          "Beim Bewerbungsschreiben ist es wichtig, die Stellenausschreibung genau zu lesen und Ihre Qualifikationen konkret darauf zu beziehen. Zeigen Sie, warum Sie der/die Richtige für die Position sind.",
+          "Ein überzeugendes Anschreiben hat einen klaren Aufbau: Einleitung mit Bezug zur Stelle, Hauptteil mit Ihren Qualifikationen und Schluss mit Gehaltsvorstellung und Verfügbarkeit."
+        ],
+        "en": [
+          "A good application consists of a cover letter, resume, and relevant certificates. The cover letter should be individually tailored to the position and clearly express your motivation.",
+          "When writing applications, it's important to read the job posting carefully and relate your qualifications specifically to it. Show why you're the right person for the position.",
+          "A convincing cover letter has a clear structure: Introduction with reference to the position, main part with your qualifications, and conclusion with salary expectations and availability."
+        ]
+      },
+      "followUp": {
+        "de": [
+          "Haben Sie schon eine konkrete Stelle im Blick, für die Sie sich bewerben möchten?",
+          "Benötigen Sie Hilfe bei einem bestimmten Teil der Bewerbung?",
+          "Möchten Sie wissen, wie Sie Ihr Anschreiben strukturieren können?"
+        ],
+        "en": [
+          "Do you already have a specific position in mind that you want to apply for?",
+          "Do you need help with a particular part of the application?",
+          "Would you like to know how to structure your cover letter?"
+        ]
+      }
+    },
+    {
+      "intent": "resume_cv",
+      "keywords": {
+        "de": ["lebenslauf", "cv", "curriculum vitae", "tabellarisch", "berufserfahrung"],
+        "en": ["resume", "cv", "curriculum vitae", "work experience", "professional experience"]
+      },
+      "responses": {
+        "de": [
+          "Ein moderner Lebenslauf sollte tabellarisch, übersichtlich und maximal 2 Seiten lang sein. Beginnen Sie mit persönlichen Daten, gefolgt von Berufserfahrung, Ausbildung und besonderen Kenntnissen.",
+          "Im Lebenslauf listen Sie Ihre Stationen chronologisch rückwärts auf. Bei der Berufserfahrung sollten Sie konkrete Aufgaben und Erfolge nennen, nicht nur Jobtitel.",
+          "Ein professionelles Bewerbungsfoto ist in Deutschland üblich, aber nicht verpflichtend. Achten Sie auf ein einheitliches Design und verwenden Sie eine seriöse E-Mail-Adresse."
+        ],
+        "en": [
+          "A modern resume should be tabular, clear, and maximum 2 pages long. Start with personal information, followed by work experience, education, and special skills.",
+          "In your resume, list your positions in reverse chronological order. For work experience, mention specific tasks and achievements, not just job titles.",
+          "A professional photo is common in Germany but not mandatory. Pay attention to consistent design and use a professional email address."
+        ]
+      },
+      "followUp": {
+        "de": [
+          "Haben Sie Lücken im Lebenslauf, die Sie erklären müssen?",
+          "Möchten Sie wissen, wie Sie Ihre Berufserfahrung am besten darstellen?",
+          "Brauchen Sie Tipps für die Gestaltung Ihres Lebenslaufs?"
+        ],
+        "en": [
+          "Do you have gaps in your resume that need explanation?",
+          "Would you like to know how to best present your work experience?",
+          "Do you need tips for designing your resume?"
+        ]
+      }
+    },
+    {
+      "intent": "interview",
+      "keywords": {
+        "de": ["vorstellungsgespräch", "interview", "gespräch", "vorbereitung", "fragen"],
+        "en": ["job interview", "interview", "preparation", "questions", "meeting"]
+      },
+      "responses": {
+        "de": [
+          "Bereiten Sie sich gut vor: Informieren Sie sich über das Unternehmen, die Position und überlegen Sie sich Antworten auf typische Fragen wie 'Warum wollen Sie bei uns arbeiten?'",
+          "Im Vorstellungsgespräch sollten Sie authentisch bleiben, konkrete Beispiele für Ihre Fähigkeiten geben und eigene Fragen zum Unternehmen stellen. Das zeigt Ihr Interesse.",
+          "Typische Fragen sind: Stärken/Schwächen, Motivation, Gehaltsvorstellungen und Zukunftspläne. Bereiten Sie ehrliche, aber positive Antworten vor."
+        ],
+        "en": [
+          "Prepare well: Research the company, the position, and think about answers to typical questions like 'Why do you want to work for us?'",
+          "In the job interview, stay authentic, give concrete examples of your skills, and ask your own questions about the company. This shows your interest.",
+          "Typical questions are: strengths/weaknesses, motivation, salary expectations, and future plans. Prepare honest but positive answers."
+        ]
+      },
+      "followUp": {
+        "de": [
+          "Haben Sie schon ein Vorstellungsgespräch vereinbart?",
+          "Möchten Sie wissen, welche Fragen Sie dem Arbeitgeber stellen können?",
+          "Brauchen Sie Hilfe bei der Vorbereitung auf spezielle Fragetypen?"
+        ],
+        "en": [
+          "Have you already scheduled a job interview?",
+          "Would you like to know what questions you can ask the employer?",
+          "Do you need help preparing for specific types of questions?"
+        ]
+      }
+    },
+    {
+      "intent": "salary",
+      "keywords": {
+        "de": ["gehalt", "lohn", "gehaltsverhandlung", "gehaltsvorstellung", "verdienst"],
+        "en": ["salary", "wage", "salary negotiation", "salary expectations", "compensation", "pay"]
+      },
+      "responses": {
+        "de": [
+          "Bei Gehaltsverhandlungen ist Vorbereitung alles: Recherchieren Sie branchenübliche Gehälter, dokumentieren Sie Ihre Leistungen und wählen Sie den richtigen Zeitpunkt für das Gespräch.",
+          "Ihre Gehaltsvorstellung sollte realistisch sein und auf Marktdaten basieren. Nutzen Sie Gehaltsstudien, Jobportale und Ihr Netzwerk für die Recherche.",
+          "In Gehaltsverhandlungen sollten Sie mit Argumenten überzeugen: Ihre Qualifikationen, Erfolge und der Mehrwert für das Unternehmen. Seien Sie selbstbewusst, aber realistisch."
+        ],
+        "en": [
+          "Preparation is everything in salary negotiations: Research industry-standard salaries, document your achievements, and choose the right time for the conversation.",
+          "Your salary expectations should be realistic and based on market data. Use salary studies, job portals, and your network for research.",
+          "In salary negotiations, convince with arguments: your qualifications, achievements, and added value for the company. Be confident but realistic."
+        ]
+      },
+      "followUp": {
+        "de": [
+          "Stehen Sie gerade vor einer Gehaltsverhandlung?",
+          "Möchten Sie wissen, wie Sie Ihr aktuelles Gehalt einschätzen können?",
+          "Brauchen Sie Tipps für die Argumentation in Gehaltsverhandlungen?"
+        ],
+        "en": [
+          "Are you currently facing a salary negotiation?",
+          "Would you like to know how to assess your current salary?",
+          "Do you need tips for argumentation in salary negotiations?"
+        ]
+      }
+    },
+    {
+      "intent": "career_planning",
+      "keywords": {
+        "de": ["karriere", "karriereplanung", "weiterentwicklung", "aufstieg", "ziele"],
+        "en": ["career", "career planning", "development", "advancement", "goals", "growth"]
+      },
+      "responses": {
+        "de": [
+          "Eine erfolgreiche Karriereplanung beginnt mit der Definition Ihrer beruflichen Ziele. Analysieren Sie Ihre Stärken, identifizieren Sie Entwicklungsbereiche und erstellen Sie einen konkreten Plan.",
+          "Für Ihre Karriereentwicklung sind wichtig: Kontinuierliche Weiterbildung, Netzwerk-Aufbau, Sichtbarkeit im Unternehmen und regelmäßige Reflexion Ihrer Ziele.",
+          "Karriereplanung ist ein kontinuierlicher Prozess. Setzen Sie sich kurz- und langfristige Ziele, evaluieren Sie regelmäßig Ihren Fortschritt und passen Sie Ihre Strategie an."
+        ],
+        "en": [
+          "Successful career planning begins with defining your professional goals. Analyze your strengths, identify development areas, and create a concrete plan.",
+          "Important for your career development: Continuous education, network building, visibility in the company, and regular reflection on your goals.",
+          "Career planning is a continuous process. Set short and long-term goals, regularly evaluate your progress, and adapt your strategy."
+        ]
+      },
+      "followUp": {
+        "de": [
+          "Haben Sie schon konkrete Karriereziele definiert?",
+          "Möchten Sie wissen, wie Sie Ihre beruflichen Stärken identifizieren?",
+          "Brauchen Sie Hilfe bei der Erstellung eines Karriereplans?"
+        ],
+        "en": [
+          "Have you already defined concrete career goals?",
+          "Would you like to know how to identify your professional strengths?",
+          "Do you need help creating a career plan?"
+        ]
+      }
+    },
+    {
+      "intent": "language_switch",
+      "keywords": {
+        "de": ["englisch", "english", "sprache", "language", "deutsch", "german"],
+        "en": ["german", "deutsch", "language", "sprache", "english", "englisch"]
+      },
+      "responses": {
+        "de": [
+          "Gerne können wir auf Englisch wechseln! I can continue our conversation in English if you prefer.",
+          "Kein Problem! I'm happy to switch to English for our career discussion."
+        ],
+        "en": [
+          "Of course we can switch to German! Gerne kann ich auf Deutsch mit Ihnen sprechen.",
+          "No problem! Ich wechsle gerne zu Deutsch für unser Karrieregespräch."
+        ]
+      },
+      "followUp": {
+        "de": [
+          "In welcher Sprache möchten Sie fortfahren?",
+          "Would you like to continue in English or German?"
+        ],
+        "en": [
+          "Which language would you like to continue in?",
+          "Möchten Sie auf Deutsch oder Englisch fortfahren?"
+        ]
+      }
+    }
+  ]
+}

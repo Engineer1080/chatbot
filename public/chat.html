@@ -1,71 +1,642 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Easy-Job Chat</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Easy-Job Multilingual Career Assistant</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .chat-container {
+            width: 90%;
+            max-width: 800px;
+            height: 90vh;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .chat-header {
+            background: linear-gradient(45deg, #4CAF50, #2196F3);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .chat-header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .chat-header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .language-selector {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .lang-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-1px);
+        }
+
+        .lang-btn.active {
+            background: rgba(255, 255, 255, 0.4);
+            border-color: rgba(255, 255, 255, 0.6);
+        }
+
+        .status-indicator {
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #4CAF50;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        .chat-messages {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background: #f8f9fa;
+        }
+
+        .message {
+            margin-bottom: 15px;
+            display: flex;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .message.user {
+            justify-content: flex-end;
+        }
+
+        .message.bot {
+            justify-content: flex-start;
+        }
+
+        .message-content {
+            max-width: 70%;
+            padding: 12px 16px;
+            border-radius: 18px;
+            position: relative;
+            word-wrap: break-word;
+            line-height: 1.4;
+        }
+
+        .message.user .message-content {
+            background: linear-gradient(45deg, #2196F3, #21CBF3);
+            color: white;
+            border-bottom-right-radius: 5px;
+        }
+
+        .message.bot .message-content {
+            background: white;
+            color: #333;
+            border: 1px solid #e0e0e0;
+            border-bottom-left-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .message-time {
+            font-size: 10px;
+            opacity: 0.7;
+            margin-top: 4px;
+            text-align: right;
+        }
+
+        .message.bot .message-time {
+            text-align: left;
+        }
+
+        .chat-input-container {
+            padding: 20px;
+            background: white;
+            border-top: 1px solid #e0e0e0;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .chat-input {
+            flex: 1;
+            padding: 12px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 25px;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .chat-input:focus {
+            border-color: #4CAF50;
+        }
+
+        .send-btn {
+            background: linear-gradient(45deg, #4CAF50, #45a049);
+            border: none;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            min-width: 80px;
+        }
+
+        .send-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+        }
+
+        .send-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .clear-btn {
+            background: linear-gradient(45deg, #f44336, #d32f2f);
+            border: none;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .clear-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(244, 67, 54, 0.3);
+        }
+
+        .typing-indicator {
+            display: none;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            color: #666;
+            font-size: 12px;
+            font-style: italic;
+        }
+
+        .typing-dots {
+            display: flex;
+            gap: 2px;
+        }
+
+        .typing-dot {
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: #999;
+            animation: typingPulse 1.5s infinite;
+        }
+
+        .typing-dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .typing-dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes typingPulse {
+            0%, 60%, 100% {
+                opacity: 0.3;
+            }
+            30% {
+                opacity: 1;
+            }
+        }
+
+        .quick-actions {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin: 10px 0;
+        }
+
+        .quick-action-btn {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid rgba(76, 175, 80, 0.3);
+            color: #4CAF50;
+            padding: 6px 12px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .quick-action-btn:hover {
+            background: rgba(76, 175, 80, 0.2);
+            transform: translateY(-1px);
+        }
+
+        .language-indicator {
+            font-size: 10px;
+            opacity: 0.6;
+            margin-left: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .chat-container {
+                width: 95%;
+                height: 95vh;
+                border-radius: 15px;
+            }
+
+            .chat-header h1 {
+                font-size: 20px;
+            }
+
+            .language-selector {
+                position: static;
+                margin-top: 10px;
+                justify-content: center;
+            }
+
+            .status-indicator {
+                position: static;
+                justify-content: center;
+                margin-bottom: 10px;
+            }
+
+            .message-content {
+                max-width: 85%;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="app-container">
-        <aside id="sidebar" class="sidebar">
-            <div class="sidebar-content">
-                <div class="sidebar-button-wrapper">
-                    <button id="clearChatButton" class="clear-chat-button">
-                        <i class="fas fa-trash button-icon"></i>
-                        Clear Chat
-                    </button>
-                </div>
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="status-indicator">
+                <div class="status-dot"></div>
+                <span id="status-text">Online</span>
+            </div>
+            <div class="language-selector">
+                <button class="lang-btn active" data-lang="de">🇩🇪 DE</button>
+                <button class="lang-btn" data-lang="en">🇺🇸 EN</button>
+            </div>
+            <h1 id="chat-title">Easy-Job Karriere-Assistent</h1>
+            <p id="chat-subtitle">Ihr intelligenter Begleiter für Bewerbungen und Karriereplanung</p>
+        </div>
 
-                <div class="spacer"></div>
-
-                <div class="sidebar-bottom-section">
-                    <button id="goToHomeButton" class="sidebar-link home-link">
-                        <i class="fas fa-home sidebar-link-icon"></i>
-                        <span class="sidebar-link-text">Return to Home</span>
-                    </button>
+        <div class="chat-messages" id="chat-messages">
+            <div class="typing-indicator" id="typing-indicator">
+                <span id="typing-text">Bot schreibt</span>
+                <div class="typing-dots">
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
                 </div>
             </div>
-        </aside>
+        </div>
 
-        <main id="mainChatArea" class="main-chat-area">
-            <button id="toggleSidebarButton" class="sidebar-toggle-button">
-                <i id="toggleSidebarIcon" class="fas fa-bars toggle-icon"></i>
-            </button>
-            
-            <div id="messagesDisplay" class="chat-messages-display"> 
-                <div class="chat-initial-message">
-                    <i class="fas fa-robot robot-icon"></i>
-                    <h3 class="initial-message-title">Start a conversation</h3>
-                    <p class="initial-message-text">Ask me questions about job offers, careers, and more. I'm here to help you!</p>
-                </div>
-            </div>
+        <div class="quick-actions" id="quick-actions">
+            <!-- Quick action buttons will be added dynamically -->
+        </div>
 
-            <form id="chatForm" class="chat-input-area">
-                <div class="input-field-wrapper">
-                    <textarea
-                        id="userInput"
-                        class="user-input-textarea"
-                        placeholder="Send a message..."
-                        rows="1"
-                    ></textarea>
-                    <button
-                        type="submit"
-                        id="sendMessageButton"
-                        class="send-message-button"
-                        title="Send"
-                    >
-                        <i class="fas fa-paper-plane send-icon"></i>
-                    </button>
-                </div>
-                <p class="disclaimer-text">
-                    Our AI may make mistakes. Please verify important information.
-                </p>
-            </form>
-        </main>
+        <div class="chat-input-container">
+            <input 
+                type="text" 
+                id="chat-input" 
+                class="chat-input" 
+                placeholder="Schreiben Sie Ihre Nachricht..."
+                maxlength="500"
+            />
+            <button class="send-btn" id="send-btn">Senden</button>
+            <button class="clear-btn" id="clear-btn" title="Chat leeren">🗑️</button>
+        </div>
     </div>
 
-    <script src="js/script.js"></script>
+    <script>
+        class MultilingualChatClient {
+            constructor() {
+                this.socket = io();
+                this.currentLanguage = 'de';
+                this.isConnected = false;
+                this.isTyping = false;
+                
+                this.initializeElements();
+                this.setupSocketListeners();
+                this.setupEventListeners();
+                this.setupQuickActions();
+            }
+
+            initializeElements() {
+                this.messagesContainer = document.getElementById('chat-messages');
+                this.chatInput = document.getElementById('chat-input');
+                this.sendBtn = document.getElementById('send-btn');
+                this.clearBtn = document.getElementById('clear-btn');
+                this.typingIndicator = document.getElementById('typing-indicator');
+                this.statusText = document.getElementById('status-text');
+                this.chatTitle = document.getElementById('chat-title');
+                this.chatSubtitle = document.getElementById('chat-subtitle');
+                this.typingText = document.getElementById('typing-text');
+                this.quickActions = document.getElementById('quick-actions');
+            }
+
+            setupSocketListeners() {
+                this.socket.on('connect', () => {
+                    console.log('Connected to server');
+                    this.isConnected = true;
+                    this.updateStatus('online');
+                    this.socket.emit('user-join', { 
+                        name: 'User', 
+                        language: this.currentLanguage 
+                    });
+                });
+
+                this.socket.on('disconnect', () => {
+                    console.log('Disconnected from server');
+                    this.isConnected = false;
+                    this.updateStatus('offline');
+                });
+
+                this.socket.on('bot-message', (data) => {
+                    this.hideTyping();
+                    this.addMessage('bot', data.message, data.language);
+                    if (data.language && data.language !== this.currentLanguage) {
+                        this.currentLanguage = data.language;
+                        this.updateLanguageUI();
+                    }
+                });
+
+                this.socket.on('chat-cleared', (data) => {
+                    this.clearMessages();
+                    this.addMessage('system', data.message, data.language);
+                });
+
+                this.socket.on('join-confirmed', (data) => {
+                    console.log('Join confirmed:', data);
+                });
+
+                this.socket.on('language-switch-error', (data) => {
+                    console.error('Language switch error:', data);
+                });
+            }
+
+            setupEventListeners() {
+                // Send message
+                this.sendBtn.addEventListener('click', () => this.sendMessage());
+                this.chatInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') this.sendMessage();
+                });
+
+                // Clear chat
+                this.clearBtn.addEventListener('click', () => this.clearChat());
+
+                // Language switching
+                document.querySelectorAll('.lang-btn').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const lang = e.target.dataset.lang;
+                        this.switchLanguage(lang);
+                    });
+                });
+
+                // Typing indicator
+                let typingTimer;
+                this.chatInput.addEventListener('input', () => {
+                    if (!this.isTyping) {
+                        this.isTyping = true;
+                        this.socket.emit('typing', { typing: true });
+                    }
+                    
+                    clearTimeout(typingTimer);
+                    typingTimer = setTimeout(() => {
+                        this.isTyping = false;
+                        this.socket.emit('typing', { typing: false });
+                    }, 1000);
+                });
+            }
+
+            setupQuickActions() {
+                const quickActionsData = {
+                    'de': [
+                        { text: '📝 Bewerbung schreiben', message: 'Wie schreibe ich eine gute Bewerbung?' },
+                        { text: '📄 Lebenslauf optimieren', message: 'Hilfe bei meinem Lebenslauf' },
+                        { text: '💼 Vorstellungsgespräch', message: 'Tipps für Vorstellungsgespräche' },
+                        { text: '💰 Gehaltsverhandlung', message: 'Wie verhandle ich mein Gehalt?' },
+                        { text: '🎯 Karriereplanung', message: 'Hilfe bei der Karriereplanung' }
+                    ],
+                    'en': [
+                        { text: '📝 Write Application', message: 'How do I write a good application?' },
+                        { text: '📄 Optimize Resume', message: 'Help with my resume' },
+                        { text: '💼 Job Interview', message: 'Tips for job interviews' },
+                        { text: '💰 Salary Negotiation', message: 'How do I negotiate my salary?' },
+                        { text: '🎯 Career Planning', message: 'Help with career planning' }
+                    ]
+                };
+
+                this.updateQuickActions(quickActionsData[this.currentLanguage]);
+            }
+
+            updateQuickActions(actions) {
+                this.quickActions.innerHTML = '';
+                actions.forEach(action => {
+                    const btn = document.createElement('button');
+                    btn.className = 'quick-action-btn';
+                    btn.textContent = action.text;
+                    btn.addEventListener('click', () => {
+                        this.chatInput.value = action.message;
+                        this.sendMessage();
+                    });
+                    this.quickActions.appendChild(btn);
+                });
+            }
+
+            switchLanguage(language) {
+                if (language === this.currentLanguage) return;
+
+                this.currentLanguage = language;
+                this.socket.emit('switch-language', { language });
+                this.updateLanguageUI();
+                this.setupQuickActions();
+            }
+
+            updateLanguageUI() {
+                // Update language buttons
+                document.querySelectorAll('.lang-btn').forEach(btn => {
+                    btn.classList.toggle('active', btn.dataset.lang === this.currentLanguage);
+                });
+
+                // Update UI text
+                const uiText = {
+                    'de': {
+                        title: 'Easy-Job Karriere-Assistent',
+                        subtitle: 'Ihr intelligenter Begleiter für Bewerbungen und Karriereplanung',
+                        placeholder: 'Schreiben Sie Ihre Nachricht...',
+                        sendBtn: 'Senden',
+                        typing: 'Bot schreibt',
+                        online: 'Online',
+                        offline: 'Offline'
+                    },
+                    'en': {
+                        title: 'Easy-Job Career Assistant',
+                        subtitle: 'Your intelligent companion for applications and career planning',
+                        placeholder: 'Type your message...',
+                        sendBtn: 'Send',
+                        typing: 'Bot is typing',
+                        online: 'Online',
+                        offline: 'Offline'
+                    }
+                };
+
+                const text = uiText[this.currentLanguage];
+                this.chatTitle.textContent = text.title;
+                this.chatSubtitle.textContent = text.subtitle;
+                this.chatInput.placeholder = text.placeholder;
+                this.sendBtn.textContent = text.sendBtn;
+                this.typingText.textContent = text.typing;
+                
+                if (this.isConnected) {
+                    this.statusText.textContent = text.online;
+                } else {
+                    this.statusText.textContent = text.offline;
+                }
+            }
+
+            sendMessage() {
+                const message = this.chatInput.value.trim();
+                if (!message || !this.isConnected) return;
+
+                this.addMessage('user', message, this.currentLanguage);
+                this.socket.emit('user-message', { message });
+                this.chatInput.value = '';
+                this.showTyping();
+            }
+
+            addMessage(sender, message, language) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `message ${sender}`;
+                
+                const now = new Date();
+                const timeStr = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                
+                const languageIndicator = language ? `<span class="language-indicator">${language.toUpperCase()}</span>` : '';
+                
+                messageDiv.innerHTML = `
+                    <div class="message-content">
+                        ${message.replace(/\n/g, '<br>')}
+                        <div class="message-time">${timeStr}${languageIndicator}</div>
+                    </div>
+                `;
+
+                this.messagesContainer.appendChild(messageDiv);
+                this.scrollToBottom();
+            }
+
+            clearMessages() {
+                const messages = this.messagesContainer.querySelectorAll('.message');
+                messages.forEach(msg => msg.remove());
+            }
+
+            clearChat() {
+                this.socket.emit('clear-chat');
+            }
+
+            showTyping() {
+                this.typingIndicator.style.display = 'flex';
+                this.scrollToBottom();
+            }
+
+            hideTyping() {
+                this.typingIndicator.style.display = 'none';
+            }
+
+            updateStatus(status) {
+                const statusDot = document.querySelector('.status-dot');
+                const text = {
+                    'de': { online: 'Online', offline: 'Offline' },
+                    'en': { online: 'Online', offline: 'Offline' }
+                };
+
+                if (status === 'online') {
+                    statusDot.style.background = '#4CAF50';
+                    this.statusText.textContent = text[this.currentLanguage].online;
+                } else {
+                    statusDot.style.background = '#f44336';
+                    this.statusText.textContent = text[this.currentLanguage].offline;
+                }
+            }
+
+            scrollToBottom() {
+                setTimeout(() => {
+                    this.messagesContainer.scrollTop = this.messagesContainer.scrollHeight;
+                }, 100);
+            }
+        }
+
+        // Initialize the multilingual chat client
+        document.addEventListener('DOMContentLoaded', () => {
+            new MultilingualChatClient();
+        });
+    </script>
 </body>
 </html>
