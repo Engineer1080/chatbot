@@ -35,7 +35,7 @@
             /* Light Mode Variables */
             --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             --chat-bg: #ffffff;
-            --header-gradient: linear-gradient(45deg, #4CAF50, #2196F3);
+            --header-gradient: linear-gradient(45deg, #ffffff, #87CEEB);
             --message-bg: #f8f9fa;
             --user-message-gradient: linear-gradient(45deg, #2196F3, #21CBF3);
             --bot-message-bg: #ffffff;
@@ -103,6 +103,14 @@
         .chat-header p {
             font-size: 14px;
             opacity: 0.9;
+        }
+
+        .brand-name {
+            background: linear-gradient(45deg, #2C7DFF, #4E3BF6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: bold;
         }
 
         .header-controls {
@@ -437,7 +445,7 @@
                     <button class="lang-btn" data-lang="en">🇺🇸 EN</button>
                 </div>
             </div>
-            <h1 id="chat-title">EasyJobAI Karriere-Assistent</h1>
+            <h1 id="chat-title"><span class="brand-name">EasyJobAI</span> Karriere-Assistent</h1>
             <p id="chat-subtitle">Ihr intelligenter Begleiter für Bewerbungen und Karriereplanung</p>
         </div>
 
@@ -676,7 +684,7 @@
                 };
 
                 const text = uiText[this.currentLanguage];
-                this.chatTitle.textContent = text.title;
+                this.chatTitle.innerHTML = `<span class="brand-name">EasyJobAI</span> ${text.title.replace('EasyJobAI ', '')}`;
                 this.chatSubtitle.textContent = text.subtitle;
                 this.chatInput.placeholder = text.placeholder;
                 this.sendBtn.textContent = text.sendBtn;
