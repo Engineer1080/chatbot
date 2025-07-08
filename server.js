@@ -713,9 +713,11 @@ app.use((err, req, res, next) => {
 
 // Start server
 const PORT = process.env.PORT || 3000;
-const HOST = process.env.HOST || 'localhost';
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
 
-server.listen(PORT, HOST, () => {
+server.listen(PORT, () => {
     console.log(`\n🤖 EasyJobAI Multilingual Chatbot Server running on http://${HOST}:${PORT}`);
     console.log(`📊 Health check available at http://${HOST}:${PORT}/api/health`);
     console.log(`⚡ Rate limit status at http://${HOST}:${PORT}/api/rate-limit`);
