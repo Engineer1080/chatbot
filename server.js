@@ -711,11 +711,9 @@ app.use((err, req, res, next) => {
     });
 });
 
-// Start server
+// Start server (Socket.IO server includes Express)
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-  });
+const HOST = process.env.HOST || 'localhost';
 
 server.listen(PORT, () => {
     console.log(`\n🤖 EasyJobAI Multilingual Chatbot Server running on http://${HOST}:${PORT}`);
